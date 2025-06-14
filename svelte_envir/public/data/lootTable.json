@@ -1,0 +1,352 @@
+[
+	{
+		"name": "Rusty Sword",
+		"rarity": "common",
+		"category": "weapon",
+		"dropChance": 40,
+		"icon": "loot-01"
+	},
+	{
+		"name": "Iron Axe",
+		"rarity": "uncommon",
+		"category": "weapon",
+		"dropChance": 30,
+		"icon": "loot-02"
+	},
+	{
+		"name": "Flame Bow",
+		"rarity": "rare",
+		"category": "weapon",
+		"dropChance": 20,
+		"icon": "loot-03"
+	},
+	{
+		"name": "Shadow Dagger",
+		"rarity": "epic",
+		"category": "weapon",
+		"dropChance": 7,
+		"icon": "loot-04"
+	},
+	{
+		"name": "Blade of Eternity",
+		"rarity": "legendary",
+		"category": "weapon",
+		"dropChance": 3,
+		"icon": "loot-05"
+	},
+	{
+		"name": "Leather Armor",
+		"rarity": "common",
+		"category": "armor",
+		"dropChance": 50,
+		"icon": "loot-06"
+	},
+	{
+		"name": "Iron Plate",
+		"rarity": "uncommon",
+		"category": "armor",
+		"dropChance": 25,
+		"icon": "loot-07"
+	},
+	{
+		"name": "Magic Robe",
+		"rarity": "rare",
+		"category": "armor",
+		"dropChance": 15,
+		"icon": "loot-08"
+	},
+	{
+		"name": "Dragon Scale Armor",
+		"rarity": "epic",
+		"category": "armor",
+		"dropChance": 7,
+		"icon": "loot-09"
+	},
+	{
+		"name": "Aegis of the Ancients",
+		"rarity": "legendary",
+		"category": "armor",
+		"dropChance": 3,
+		"icon": "loot-10"
+	},
+	{
+		"name": "Health Potion",
+		"rarity": "common",
+		"category": "potion",
+		"dropChance": 60,
+		"icon": "loot-11"
+	},
+	{
+		"name": "Mana Potion",
+		"rarity": "common",
+		"category": "potion",
+		"dropChance": 20,
+		"icon": "loot-12"
+	},
+	{
+		"name": "Stamina Elixir",
+		"rarity": "uncommon",
+		"category": "potion",
+		"dropChance": 10,
+		"icon": "loot-13"
+	},
+	{
+		"name": "Potion of Invincibility",
+		"rarity": "epic",
+		"category": "potion",
+		"dropChance": 5,
+		"icon": "loot-14"
+	},
+	{
+		"name": "Elixir of Time",
+		"rarity": "legendary",
+		"category": "potion",
+		"dropChance": 5,
+		"icon": "loot-15"
+	},
+	{
+		"name": "Iron Ore",
+		"rarity": "common",
+		"category": "material",
+		"dropChance": 40,
+		"icon": "loot-16"
+	},
+	{
+		"name": "Enchanted Wood",
+		"rarity": "uncommon",
+		"category": "material",
+		"dropChance": 30,
+		"icon": "loot-17"
+	},
+	{
+		"name": "Soul Shard",
+		"rarity": "rare",
+		"category": "material",
+		"dropChance": 20,
+		"icon": "loot-18"
+	},
+	{
+		"name": "Mystic Crystal",
+		"rarity": "epic",
+		"category": "material",
+		"dropChance": 7,
+		"icon": "loot-19"
+	},
+	{
+		"name": "Void Essence",
+		"rarity": "legendary",
+		"category": "material",
+		"dropChance": 3,
+		"icon": "loot-20"
+	},
+	{
+		"name": "Mystery Key",
+		"rarity": "uncommon",
+		"category": "special",
+		"dropChance": 50,
+		"icon": "loot-21"
+	},
+	{
+		"name": "Treasure Map",
+		"rarity": "rare",
+		"category": "special",
+		"dropChance": 25,
+		"icon": "loot-22"
+	},
+	{
+		"name": "Teleport Scroll",
+		"rarity": "rare",
+		"category": "special",
+		"dropChance": 15,
+		"icon": "loot-23"
+	},
+	{
+		"name": "Pet Egg",
+		"rarity": "epic",
+		"category": "special",
+		"dropChance": 7,
+		"icon": "loot-24"
+	},
+	{
+		"name": "Ancient Relic",
+		"rarity": "legendary",
+		"category": "special",
+		"dropChance": 3,
+		"icon": "loot-25"
+	},
+	{
+		"name": "Bronze Spear",
+		"rarity": "common",
+		"category": "weapon",
+		"dropChance": 35,
+		"icon": "loot-26"
+	},
+	{
+		"name": "Silver Hammer",
+		"rarity": "uncommon",
+		"category": "weapon",
+		"dropChance": 25,
+		"icon": "loot-27"
+	},
+	{
+		"name": "Storm Staff",
+		"rarity": "rare",
+		"category": "weapon",
+		"dropChance": 20,
+		"icon": "loot-28"
+	},
+	{
+		"name": "Vampire Fang Blade",
+		"rarity": "epic",
+		"category": "weapon",
+		"dropChance": 10,
+		"icon": "loot-29"
+	},
+	{
+		"name": "Phoenix Claw",
+		"rarity": "legendary",
+		"category": "weapon",
+		"dropChance": 5,
+		"icon": "loot-30"
+	},
+	{
+		"name": "Chainmail Vest",
+		"rarity": "common",
+		"category": "armor",
+		"dropChance": 45,
+		"icon": "loot-31"
+	},
+	{
+		"name": "Runed Cloak",
+		"rarity": "uncommon",
+		"category": "armor",
+		"dropChance": 25,
+		"icon": "loot-32"
+	},
+	{
+		"name": "Obsidian Shield",
+		"rarity": "rare",
+		"category": "armor",
+		"dropChance": 15,
+		"icon": "loot-33"
+	},
+	{
+		"name": "Celestial Plate",
+		"rarity": "epic",
+		"category": "armor",
+		"dropChance": 10,
+		"icon": "loot-34"
+	},
+	{
+		"name": "Astral Shell",
+		"rarity": "legendary",
+		"category": "armor",
+		"dropChance": 5,
+		"icon": "loot-35"
+	},
+	{
+		"name": "Minor Healing Potion",
+		"rarity": "common",
+		"category": "potion",
+		"dropChance": 55,
+		"icon": "loot-36"
+	},
+	{
+		"name": "Energy Tonic",
+		"rarity": "uncommon",
+		"category": "potion",
+		"dropChance": 20,
+		"icon": "loot-37"
+	},
+	{
+		"name": "Shield Elixir",
+		"rarity": "rare",
+		"category": "potion",
+		"dropChance": 15,
+		"icon": "loot-38"
+	},
+	{
+		"name": "Fire Resistance Brew",
+		"rarity": "epic",
+		"category": "potion",
+		"dropChance": 7,
+		"icon": "loot-39"
+	},
+	{
+		"name": "Void Brew",
+		"rarity": "legendary",
+		"category": "potion",
+		"dropChance": 3,
+		"icon": "loot-40"
+	},
+	{
+		"name": "Copper Nugget",
+		"rarity": "common",
+		"category": "material",
+		"dropChance": 45,
+		"icon": "loot-41"
+	},
+	{
+		"name": "Spirit Leaf",
+		"rarity": "uncommon",
+		"category": "material",
+		"dropChance": 25,
+		"icon": "loot-42"
+	},
+	{
+		"name": "Dragon Bone",
+		"rarity": "rare",
+		"category": "material",
+		"dropChance": 15,
+		"icon": "loot-43"
+	},
+	{
+		"name": "Arcane Dust",
+		"rarity": "epic",
+		"category": "material",
+		"dropChance": 10,
+		"icon": "loot-44"
+	},
+	{
+		"name": "Star Core",
+		"rarity": "legendary",
+		"category": "material",
+		"dropChance": 5,
+		"icon": "loot-45"
+	},
+	{
+		"name": "Treasure Compass",
+		"rarity": "uncommon",
+		"category": "special",
+		"dropChance": 40,
+		"icon": "loot-23"
+	},
+	{
+		"name": "Golden Chest Key",
+		"rarity": "rare",
+		"category": "special",
+		"dropChance": 25,
+		"icon": "loot-24"
+	},
+	{
+		"name": "Teleport Rune",
+		"rarity": "epic",
+		"category": "special",
+		"dropChance": 10,
+		"icon": "loot-25"
+	},
+	{
+		"name": "Summoning Stone",
+		"rarity": "epic",
+		"category": "special",
+		"dropChance": 7,
+		"icon": "loot-26"
+	},
+	{
+		"name": "Dimensional Coin",
+		"rarity": "legendary",
+		"category": "special",
+		"dropChance": 3,
+		"icon": "loot-27"
+	}
+]
