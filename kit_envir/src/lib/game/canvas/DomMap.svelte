@@ -1,14 +1,14 @@
 <script lang="ts">
-	import { game } from '../game.svelte.ts'
-	let w = $state(0)
-	let h = $state(0)
+	import { game } from '../game.svelte.ts';
+	let w = $state(0);
+	let h = $state(0);
 	$effect(() => {
 		if (w && h) {
-			const xs = Math.floor(w / game.width)
-			const ys = Math.floor(h / game.height)
-			game.size = Math.min(xs, ys)
+			const xs = Math.floor(w / game.width);
+			const ys = Math.floor(h / game.height);
+			game.size = Math.min(xs, ys);
 		}
-	})
+	});
 </script>
 
 <article class="rogue">

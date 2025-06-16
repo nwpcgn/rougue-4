@@ -1,8 +1,8 @@
-@import url('https://fonts.xz.style/serve/fira-code.css');
+/* @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Fira+Mono:wght@400;500;700&family=Press+Start+2P&family=Uncial+Antiqua&display=swap');*/
 
 :root {
 	--nc-font-sans: 'Fira Code', monospace;
-	--nc-font-mono: 'Fira Code', monospace;
+	--nc-font-mono: 'Fira Mono', monospace;
 	--nc-tx-1: #ffffff;
 	--nc-tx-2: #eeeeee;
 	--nc-bg-1: #000000;

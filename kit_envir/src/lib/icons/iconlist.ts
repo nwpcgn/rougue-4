@@ -443,5 +443,5 @@ const data = [
 		icon: 'nwp-wheel',
 		selected: false
 	}
-]
-export default data
+];
+export default data;

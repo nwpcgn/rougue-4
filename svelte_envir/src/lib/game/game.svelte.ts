@@ -9,7 +9,7 @@ import type {
 } from './Game'
 import generateMap from './generateMap'
 
-class Player {
+export class Player {
 	name: string = $state('')
 	hp: number = $state(0)
 	atc: number = $state(0)
@@ -36,7 +36,7 @@ class Player {
 	}
 }
 
-class Dungeon {
+export class Dungeon {
 	map: string[][] | null = $state()
 	items: string[] = $state([])
 	enemys: string[] = $state([])
@@ -62,7 +62,7 @@ class Dungeon {
 	}
 }
 
-class Game {
+export class Game {
 	#width: number = $state(25)
 	#height: number = $state(25)
 	#size: number = $state(20)
@@ -79,7 +79,7 @@ class Game {
 	player: Fighter = $state(null)
 	enemy: Fighter = $state(null)
 
-	shuffle(array) {
+	shuffle(array = []) {
 		const copy = [...array]
 		for (let i = copy.length - 1; i > 0; i--) {
 			const j = Math.floor(Math.random() * (i + 1))
@@ -91,8 +91,10 @@ class Game {
 	init(daten) {
 		this.assets.loot = this.shuffle(daten.loot)
 		this.assets.fighter = this.shuffle(daten.fighter)
+		this.#name = "Dungerue"
 		this.createMap()
 		this.createChars()
+		this.printMap()
 	}
 	createMap() {
 		this.dungeon.generate(this.width, this.height, this.type)
@@ -102,6 +104,10 @@ class Game {
 		const e = this.assets.fighter?.shift()
 		this.player = new Player(p)
 		this.enemy = new Player(e)
+	}
+
+	printMap() {
+		console.log(this.dungeon)
 	}
 
 	get name() {

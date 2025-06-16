@@ -1,5 +1,5 @@
 <script lang="ts">
-	let { children, isCenter, isRounded, isDark, title } = $props()
+	let { children, isCenter, isRounded, isDark, isTight, title } = $props()
 </script>
 
 <div
@@ -7,7 +7,8 @@
 	class:is-rounded={isRounded}
 	class:is-dark={isDark}
 	class:is-centered={isCenter}
-	class:with-title={title}>
+	class:with-title={title}
+	class:is-tight={isTight}>
 	{#if title}
 		<p class="title">{title}</p>
 	{/if}

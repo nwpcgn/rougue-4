@@ -1,7 +1,7 @@
 <script lang="ts">
-	import DomMap from '../canvas/DomMap.svelte'
-	import Preview from '../canvas/Preview.svelte'
-	let { isCanvasMap = $bindable(false) } = $props()
+	import DomMap from '../canvas/DomMap.svelte';
+	import Preview from '../canvas/Preview.svelte';
+	let { isCanvasMap = $bindable(false) } = $props();
 </script>
 
 <section class="animated nwp page center" class:active={!isCanvasMap}>

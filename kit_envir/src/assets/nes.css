@@ -186,9 +186,7 @@ code,
 kbd,
 pre,
 samp {
-	font-family:
-		SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
-		monospace;
+	font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
 	font-size: 1em;
 }
 
@@ -1734,22 +1732,8 @@ input[type='radio'] {
 .nes-progress.is-pattern::-webkit-progress-value {
 	background-color: #212529;
 	background-image:
-		linear-gradient(
-			45deg,
-			#fff 25%,
-			transparent 25%,
-			transparent 75%,
-			#fff 75%,
-			#fff
-		),
-		linear-gradient(
-			45deg,
-			#fff 25%,
-			transparent 25%,
-			transparent 75%,
-			#fff 75%,
-			#fff
-		);
+		linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff),
+		linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff);
 	background-position:
 		0 0,
 		10px 10px;
@@ -1759,22 +1743,8 @@ input[type='radio'] {
 .nes-progress.is-pattern::-moz-progress-bar {
 	background-color: #212529;
 	background-image:
-		-moz-linear-gradient(
-			45deg,
-			#fff 25%,
-			transparent 25%,
-			transparent 75%,
-			#fff 75%,
-			#fff
-		),
-		-moz-linear-gradient(
-				45deg,
-				#fff 25%,
-				transparent 25%,
-				transparent 75%,
-				#fff 75%,
-				#fff
-			);
+		-moz-linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff),
+		-moz-linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff);
 	background-position:
 		0 0,
 		10px 10px;
@@ -1784,22 +1754,8 @@ input[type='radio'] {
 .nes-progress.is-pattern::-ms-fill {
 	background-color: #212529;
 	background-image:
-		linear-gradient(
-			45deg,
-			#fff 25%,
-			transparent 25%,
-			transparent 75%,
-			#fff 75%,
-			#fff
-		),
-		linear-gradient(
-			45deg,
-			#fff 25%,
-			transparent 25%,
-			transparent 75%,
-			#fff 75%,
-			#fff
-		);
+		linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff),
+		linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff);
 	background-position:
 		0 0,
 		10px 10px;

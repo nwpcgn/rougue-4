@@ -1,0 +1,32 @@
+{
+	"monster-game-images": [
+		{
+			"slug": "bg-land",
+			"src": "./img/bg-land.png"
+		},
+		{
+			"slug": "border",
+			"src": "./img/border.png"
+		},
+		{
+			"slug": "border2",
+			"src": "./img/border2.png"
+		},
+		{
+			"slug": "group",
+			"src": "./img/group.png"
+		},
+		{
+			"slug": "logo",
+			"src": "./img/logo.png"
+		},
+		{
+			"slug": "looser",
+			"src": "./img/looser.png"
+		},
+		{
+			"slug": "winner",
+			"src": "./img/winner.png"
+		}
+	]
+}
