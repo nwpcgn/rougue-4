@@ -1,0 +1,38 @@
+@layer base, utils, components;
+
+@import '@webtui/css/base.css';
+@import '@webtui/css/utils/box.css';
+@import '@webtui/css/components/button.css';
+@import '@webtui/css/components/typography.css';
+@import '@webtui/css/components/badge.css';
+@import '@webtui/css/components/input.css';
+@import '@webtui/css/components/textarea.css';
+@import '@webtui/css/components/popover.css';
+@import '@webtui/css/components/separator.css';
+@import '@webtui/css/components/pre.css';
+@import '@webtui/css/components/dialog.css';
+
+@import './flexbox.css';
+@import './padding.css';
+
+@layer base {
+	:root {
+		--font-family: 'Fira Mono', monospace;
+		--background0: oklch(91.637% 0.034 90.515);
+		--background1: oklch(88.272% 0.049 91.774);
+		--background2: oklch(84.133% 0.065 90.856);
+		--background3: #d6d3d1;
+		--foreground0: #292524;
+		--foreground1: #44403c;
+		--foreground2: #525252;
+		--font-size: 18px;
+		--line-height: 1.4;
+		--box-border-color: var(--background1);
+	}
+}
+
+@media (max-width: 480px) {
+	:root {
+		--font-size: 16px;
+	}
+}

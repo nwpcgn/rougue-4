@@ -1,5 +1,11 @@
 [
 	{
+		"slug": "root",
+		"name": "Landing",
+		"href": "/",
+		"icon": "nwp-start"
+	},
+	{
 		"slug": "lobby",
 		"name": "Lobby",
 		"href": "/lobby",
@@ -24,4 +30,3 @@
 		"icon": "nwp-settings"
 	}
 ]
-

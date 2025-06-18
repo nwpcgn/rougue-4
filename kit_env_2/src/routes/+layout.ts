@@ -1,4 +1,5 @@
 import type { LayoutLoad } from './$types'
+import { game } from '$lib/game.svelte.ts'
 const apis = [
 	'/data/game.json'
 	// '/data/game-init.json',
@@ -21,8 +22,11 @@ export const load = (async ({ fetch }) => {
 			)
 		)
 	)
+
+	game.init(res[0])
+
 	return {
 		name: 'nwp-studio',
-		initData: res[0]
+		initMap: game.dungeon.map
 	}
 }) satisfies LayoutLoad

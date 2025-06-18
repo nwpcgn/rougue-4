@@ -9,6 +9,6 @@
 <section class="page center nwp">
 	<header>
 		<h1>{data.title}</h1>
-        <h4>{data.heading}</h4>
+		<h2>{data.heading}</h2>
 	</header>
 </section>

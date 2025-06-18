@@ -50,7 +50,7 @@ class Dungeon {
 	})
 	generate(width = 40, height = 40, type = 'Uniform') {
 		const data = generateMap(width, height, type)
-		// console.log(data)
+		console.log(data)
 		this.map = data.map
 		this.rooms = data.rooms
 		this.items = data.items

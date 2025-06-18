@@ -3,7 +3,7 @@ import type { PageLoad } from './$types'
 export const load = (async () => {
 	return {
 		slug: 'lobby',
-		icon: 'nwp-home',
+		icon: 'nwp-logo-lobby',
 		heading: 'Dungerue - Lobby',
 		title: 'Dungerue Manner',
 		component: 'generator',
