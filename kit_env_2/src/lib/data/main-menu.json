@@ -1,0 +1,27 @@
+[
+	{
+		"slug": "lobby",
+		"name": "Lobby",
+		"href": "/lobby",
+		"icon": "nwp-lobby"
+	},
+	{
+		"slug": "map",
+		"name": "Map",
+		"href": "/map",
+		"icon": "nwp-map"
+	},
+	{
+		"slug": "story",
+		"name": "Lore",
+		"href": "/story",
+		"icon": "nwp-story"
+	},
+	{
+		"slug": "settings",
+		"name": "Settings",
+		"href": "/settings",
+		"icon": "nwp-settings"
+	}
+]
+

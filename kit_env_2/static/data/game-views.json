@@ -1,0 +1,146 @@
+[
+	{
+		"slug": "lobby",
+		"name": "Lobby",
+		"href": "/lobby",
+		"icon": "nwp-home",
+		"heading": "Dungerue - Lobby",
+		"title": "Dungerue Manner",
+		"component": "generator",
+		"actions": "lobby,exit|settings,Options",
+		"nav": [
+			{
+				"slug": "root",
+				"name": "Entrance",
+				"href": "/",
+				"icon": "nwp-pokeball"
+			},
+			{
+				"slug": "map",
+				"name": "Map",
+				"href": "/map",
+				"icon": "nwp-game"
+			},
+			{
+				"slug": "story",
+				"name": "Lore",
+				"href": "/story",
+				"icon": "nwp-dice"
+			},
+			{
+				"slug": "settings",
+				"name": "Settings",
+				"href": "/settings",
+				"icon": "nwp-options"
+			}
+		]
+	},
+	{
+		"slug": "map",
+		"name": "Map",
+		"href": "/map",
+		"icon": "nwp-game",
+		"heading": "Dungerue - Map",
+		"title": "Reado Empire",
+		"component": "dungeon",
+		"actions": "lobby,exit",
+		"nav": [
+			{
+				"slug": "root",
+				"name": "Entrance",
+				"href": "/",
+				"icon": "nwp-pokeball"
+			},
+			{
+				"slug": "lobby",
+				"name": "Lobby",
+				"href": "/lobby",
+				"icon": "nwp-home"
+			},
+			{
+				"slug": "story",
+				"name": "Lore",
+				"href": "/story",
+				"icon": "nwp-dice"
+			},
+			{
+				"slug": "settings",
+				"name": "Settings",
+				"href": "/settings",
+				"icon": "nwp-options"
+			}
+		]
+	},
+	{
+		"slug": "story",
+		"name": "Lore",
+		"href": "/story",
+		"icon": "nwp-dice",
+		"heading": "Dungerue - Dungerue",
+		"title": "Darkblack",
+		"component": "slides",
+		"actions": "lobby,exit",
+		"nav": [
+			{
+				"slug": "root",
+				"name": "Entrance",
+				"href": "/",
+				"icon": "nwp-pokeball"
+			},
+			{
+				"slug": "lobby",
+				"name": "Lobby",
+				"href": "/lobby",
+				"icon": "nwp-home"
+			},
+			{
+				"slug": "map",
+				"name": "Map",
+				"href": "/map",
+				"icon": "nwp-game"
+			},
+			{
+				"slug": "settings",
+				"name": "Settings",
+				"href": "/settings",
+				"icon": "nwp-options"
+			}
+		]
+	},
+	{
+		"slug": "settings",
+		"name": "Settings",
+		"href": "/settings",
+		"icon": "nwp-options",
+		"heading": "Dungerue - Options",
+		"title": "Map Options",
+		"component": "options",
+		"actions": "lobby,exit",
+		"nav": [
+			{
+				"slug": "root",
+				"name": "Entrance",
+				"href": "/",
+				"icon": "nwp-pokeball"
+			},
+			{
+				"slug": "lobby",
+				"name": "Lobby",
+				"href": "/lobby",
+				"icon": "nwp-home"
+			},
+			{
+				"slug": "map",
+				"name": "Map",
+				"href": "/map",
+				"icon": "nwp-game"
+			},
+			{
+				"slug": "story",
+				"name": "Lore",
+				"href": "/story",
+				"icon": "nwp-dice"
+			}
+		]
+	}
+]

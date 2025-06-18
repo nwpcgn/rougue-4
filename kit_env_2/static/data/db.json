@@ -1,0 +1,1452 @@
+{
+	"nav-menu": [
+		{
+			"name": "Start",
+			"href": "/",
+			"icon": "nwp-home",
+			"hidden": false
+		},
+		{
+			"name": "Game",
+			"href": "/game",
+			"icon": "nwp-game",
+			"hidden": false
+		},
+		{
+			"name": "Lore",
+			"href": "/lore",
+			"icon": "nwp-options",
+			"hidden": false
+		},
+		{
+			"name": "Settings",
+			"href": "/settings",
+			"icon": "nwp-dice",
+			"hidden": false
+		}
+	],
+	"action-menu": [
+		{
+			"name": "Start",
+			"href": "/",
+			"icon": "nwp-home",
+			"slug": "start",
+			"title": "Lobby",
+			"component": null
+		},
+		{
+			"name": "Game",
+			"href": "/game",
+			"icon": "nwp-game",
+			"slug": "map",
+			"title": "Start Game",
+			"component": null
+		},
+		{
+			"name": "Lore",
+			"href": "/lore",
+			"icon": "nwp-options",
+			"slug": "story",
+			"title": "Dungeon Lore",
+			"component": null
+		},
+		{
+			"name": "Settings",
+			"href": "/settings",
+			"icon": "nwp-dice",
+			"slug": "settings",
+			"title": "Map Settings",
+			"component": null
+		}
+	],
+	"event-msgs": [
+		{
+			"type": "positive_event",
+			"text": "Du spürst eine warme Energie – deine Wunden heilen sich!"
+		},
+		{
+			"type": "positive_event",
+			"text": "Ein Lichtstrahl trifft dich. Du fühlst dich plötzlich stärker."
+		},
+		{
+			"type": "positive_event",
+			"text": "Du findest einen geheimen Pfadder dir Zeit erspart."
+		},
+		{
+			"type": "positive_event",
+			"text": "Ein freundlicher Geist überreicht dir ein Geschenk."
+		},
+		{
+			"type": "positive_event",
+			"text": "Ein alter Zauber wurde aufgelöst – du fühlst dich erleichtert."
+		},
+		{
+			"type": "positive_event",
+			"text": "Die Sonne bricht durch die Wolken und füllt dich mit Hoffnung."
+		},
+		{
+			"type": "positive_event",
+			"text": "Du entdeckst eine Quelle reiner Magie – deine Kraft ist erneuert."
+		},
+		{
+			"type": "positive_event",
+			"text": "Ein Reisender segnet dich mit Glück auf deinem Weg."
+		},
+		{
+			"type": "positive_event",
+			"text": "Ein altes Lied erklingt – du fühlst dich inspiriert."
+		},
+		{
+			"type": "positive_event",
+			"text": "Ein Schutzkreis schützt dich vor dem nächsten Schaden."
+		},
+		{
+			"type": "positive_event",
+			"text": "Du wirst mit einer Vision der Zukunft erfüllt – und fühlst dich vorbereitet."
+		},
+		{
+			"type": "positive_event",
+			"text": "Du erhältst einen geheimen Segen – deine nächste Begegnung wird einfacher."
+		},
+		{
+			"type": "positive_event",
+			"text": "Ein Vogel bringt dir eine wertvolle Nachricht."
+		},
+		{
+			"type": "positive_event",
+			"text": "Du findest einen alten Brief – er stärkt deinen Mut."
+		},
+		{
+			"type": "positive_event",
+			"text": "Deine Sinne schärfen sich – du erkennst eine Gefahr im Voraus."
+		},
+		{
+			"type": "negative_event",
+			"text": "Ein plötzlicher Schatten streift dich – du verlierst Lebensenergie."
+		},
+		{
+			"type": "negative_event",
+			"text": "Du trittst in eine Falle und verletzt dich."
+		},
+		{
+			"type": "negative_event",
+			"text": "Ein magischer Sturm trifft dich mit voller Wucht."
+		},
+		{
+			"type": "negative_event",
+			"text": "Deine Tasche ist beschädigt – einige Gegenstände sind verloren."
+		},
+		{
+			"type": "negative_event",
+			"text": "Eine dunkle Präsenz raubt dir deine Kraft."
+		},
+		{
+			"type": "negative_event",
+			"text": "Du wirst von seltsamen Stimmen heimgesucht – deine Moral sinkt."
+		},
+		{
+			"type": "negative_event",
+			"text": "Dein Weg wird durch unheimliche Kreaturen blockiert."
+		},
+		{
+			"type": "negative_event",
+			"text": "Ein Dieb stiehlt dir unbemerkt etwas aus deinem Inventar."
+		},
+		{
+			"type": "negative_event",
+			"text": "Du verlierst die Orientierung in dichtem Nebel."
+		},
+		{
+			"type": "negative_event",
+			"text": "Ein Bann lähmt dich vorübergehend."
+		},
+		{
+			"type": "negative_event",
+			"text": "Dein Feuerholz ist nass – du kannst kein Lager machen."
+		},
+		{
+			"type": "negative_event",
+			"text": "Ein bösartiger Blick lähmt dich mit Angst."
+		},
+		{
+			"type": "negative_event",
+			"text": "Du stürzt in ein Erdloch und verletzt dich am Bein."
+		},
+		{
+			"type": "negative_event",
+			"text": "Dein Amulett zerbricht – ein Teil deiner Macht geht verloren."
+		},
+		{
+			"type": "negative_event",
+			"text": "Ein alter Fluch aktiviert sich plötzlich."
+		},
+		{
+			"type": "loot_found",
+			"text": "Du öffnest eine Truhe und findest: {item_name}!"
+		},
+		{
+			"type": "loot_found",
+			"text": "In einem Haufen Asche entdeckst du {item_name}."
+		},
+		{
+			"type": "loot_found",
+			"text": "Ein Monster ließ etwas fallen – {item_name} gehört jetzt dir."
+		},
+		{
+			"type": "loot_found",
+			"text": "Versteckt unter einem Stein findest du {item_name}."
+		},
+		{
+			"type": "loot_found",
+			"text": "Du erhältst {item_name} als Belohnung für deinen Mut."
+		},
+		{
+			"type": "loot_found",
+			"text": "Ein Lichtschein führt dich zu {item_name}."
+		},
+		{
+			"type": "loot_found",
+			"text": "Du gräbst im Sand und findest {item_name}."
+		},
+		{
+			"type": "loot_found",
+			"text": "Du hast {item_name} durch Zufall entdeckt!"
+		},
+		{
+			"type": "loot_found",
+			"text": "Du gewinnst {item_name} im Spiel gegen einen Händler."
+		},
+		{
+			"type": "loot_found",
+			"text": "Ein geheimnisvoller Fremder übergibt dir {item_name}."
+		},
+		{
+			"type": "loot_found",
+			"text": "{item_name} erscheint plötzlich in deiner Tasche."
+		},
+		{
+			"type": "loot_found",
+			"text": "Ein Rätsel wurde gelöst – als Belohnung bekommst du {item_name}."
+		},
+		{
+			"type": "loot_found",
+			"text": "Deine Geduld zahlt sich aus – du findest {item_name}."
+		},
+		{
+			"type": "loot_found",
+			"text": "Ein alter Baum wirft {item_name} ab."
+		},
+		{
+			"type": "loot_found",
+			"text": "Du findest {item_name} in einer alten Höhle."
+		},
+		{
+			"type": "npc_dialogue",
+			"text": "Sei vorsichtigFremder. Nicht alles ist so friedlich"
+		},
+		{
+			"type": "npc_dialogue",
+			"text": "Ich habe Geschichten gehört von einem Schatz tief im Osten."
+		},
+		{
+			"type": "npc_dialogue",
+			"text": "Du erinnerst mich an jemanden... einen alten Helden vielleicht."
+		},
+		{
+			"type": "npc_dialogue",
+			"text": "Meine Katze ist verschwunden. Wenn du sie findestbekommst du eine Belohnung."
+		},
+		{
+			"type": "npc_dialogue",
+			"text": "Man sagtdie Sterne flüstern mit jenen"
+		},
+		{
+			"type": "npc_dialogue",
+			"text": "Schau dich gut um. Manchmal versteckt sich das Wertvollste direkt vor deinen Augen."
+		},
+		{
+			"type": "npc_dialogue",
+			"text": "Die Dunkelheit wächst. Pass auf dich auf da draußen."
+		},
+		{
+			"type": "npc_dialogue",
+			"text": "Wenn du nach Süden gehstnimm genügend Tränke mit."
+		},
+		{
+			"type": "npc_dialogue",
+			"text": "Ich war einst Abenteurer wie du – bis ich ein Schwert im Knie hatte."
+		},
+		{
+			"type": "npc_dialogue",
+			"text": "Hast du etwas zu handeln? Ich suche besondere Materialien."
+		},
+		{
+			"type": "npc_dialogue",
+			"text": "Hier war früher eine große Stadt... jetzt ist nur noch Stille."
+		},
+		{
+			"type": "npc_dialogue",
+			"text": "Suchst du Arbeit? Ich habe da etwas für dich... wenn du mutig bist."
+		},
+		{
+			"type": "npc_dialogue",
+			"text": "Hörst du das? Etwas stimmt nicht mit diesem Ort."
+		},
+		{
+			"type": "npc_dialogue",
+			"text": "Der Fluss spricht. Hast du es bemerkt?"
+		},
+		{
+			"type": "npc_dialogue",
+			"text": "Einmal war ich auf der anderen Seite der Berge – dort gibt es Wunder."
+		},
+		{
+			"type": "combat_start",
+			"text": "Ein Schatten bewegt sich – bereite dich auf den Kampf vor!"
+		},
+		{
+			"type": "combat_start",
+			"text": "Dein Herz schlägt schneller – ein Gegner nähert sich!"
+		},
+		{
+			"type": "combat_start",
+			"text": "Du hast den falschen Pfad gewählt!ruft dein Feind."
+		},
+		{
+			"type": "combat_start",
+			"text": "Dein Gegner zieht seine Waffe. Keine Gnade!"
+		},
+		{
+			"type": "combat_start",
+			"text": "Du spürst feindliche Präsenz – der Kampf beginnt."
+		},
+		{
+			"type": "combat_start",
+			"text": "Das wird dir noch leid tun!schreit dein Widersacher."
+		},
+		{
+			"type": "combat_start",
+			"text": "Ein Geräusch hinter dir – du wirst angegriffen!"
+		},
+		{
+			"type": "combat_start",
+			"text": "Endlich ein würdiger Gegner!ruft der Feind."
+		},
+		{
+			"type": "combat_start",
+			"text": "Der Boden zittert – etwas Großes nähert sich."
+		},
+		{
+			"type": "combat_start",
+			"text": "Dein Instinkt war richtig – du bist nicht allein."
+		},
+		{
+			"type": "level_up",
+			"text": "Du fühlst dich stärker – du bist aufgestiegen!"
+		},
+		{
+			"type": "level_up",
+			"text": "Ein neues Level! Neue Kräfte erwachen in dir."
+		},
+		{
+			"type": "level_up",
+			"text": "Dein Training zahlt sich aus – du bist gewachsen."
+		},
+		{
+			"type": "level_up",
+			"text": "Du meisterst eine neue Fähigkeit."
+		},
+		{
+			"type": "level_up",
+			"text": "Ein Licht durchdringt dich – du hast ein Level erreicht."
+		},
+		{
+			"type": "level_up",
+			"text": "Dein Körper pulsiert vor Energie – Level Up!"
+		},
+		{
+			"type": "level_up",
+			"text": "Erfahrung macht dich weiser – du bist bereit für mehr."
+		},
+		{
+			"type": "level_up",
+			"text": "Die Luft um dich vibriert – du entwickelst dich weiter."
+		},
+		{
+			"type": "level_up",
+			"text": "Du bist nun mächtiger als je zuvor."
+		},
+		{
+			"type": "level_up",
+			"text": "Gut gemacht!hörst du eine Stimme in deinem Inneren."
+		},
+		{
+			"type": "tutorial",
+			"text": "Drücke [E]um mit Objekten zu interagieren."
+		},
+		{
+			"type": "tutorial",
+			"text": "Öffne dein Inventar mit [I]um Gegenstände zu verwenden."
+		},
+		{
+			"type": "tutorial",
+			"text": "Speichere regelmäßig – du weißt niewas kommt."
+		},
+		{
+			"type": "tutorial",
+			"text": "Tränke kannst du in deinem Inventar anwenden."
+		},
+		{
+			"type": "tutorial",
+			"text": "Kämpfe mit [Linksklick] und blocke mit [Rechtsklick]."
+		},
+		{
+			"type": "tutorial",
+			"text": "Du kannst schleichenum unbemerkt zu bleiben."
+		},
+		{
+			"type": "tutorial",
+			"text": "Halte [Shift]um zu sprinten – aber sei sparsam mit deiner Ausdauer."
+		},
+		{
+			"type": "tutorial",
+			"text": "Schwache Gegner erkennst du an ihrer Haltung."
+		},
+		{
+			"type": "tutorial",
+			"text": "In dunklen Gebieten hilft dir eine Fackel."
+		},
+		{
+			"type": "tutorial",
+			"text": "Kartenfragmente helfen dir beim Erkunden."
+		},
+		{
+			"type": "quest_event",
+			"text": "Du hast einen neuen Auftrag erhalten."
+		},
+		{
+			"type": "quest_event",
+			"text": "Die Aufgabe ist abgeschlossen – kehre zum Auftraggeber zurück."
+		},
+		{
+			"type": "quest_event",
+			"text": "Ein Tagebucheintrag wurde aktualisiert."
+		},
+		{
+			"type": "quest_event",
+			"text": "Dein Fortschritt wurde gespeichert."
+		},
+		{
+			"type": "quest_event",
+			"text": "Du findest einen Hinweis auf das nächste Ziel."
+		},
+		{
+			"type": "quest_event",
+			"text": "Etwas stimmt nicht... die Quest entwickelt sich anders."
+		},
+		{
+			"type": "quest_event",
+			"text": "Ein neuer Ort wurde auf deiner Karte markiert."
+		},
+		{
+			"type": "quest_event",
+			"text": "Ein alter Bekannter hat dir eine neue Mission gegeben."
+		},
+		{
+			"type": "quest_event",
+			"text": "Du brauchst ein besonderes Item für diese Aufgabe."
+		},
+		{
+			"type": "quest_event",
+			"text": "Die Belohnung für diese Aufgabe wartet auf dich."
+		},
+		{
+			"type": "ambient",
+			"text": "Die Bäume flüstern im Wind – etwas Altes lebt noch hier."
+		},
+		{
+			"type": "ambient",
+			"text": "Ein ferner Donner hallt durch die Berge."
+		},
+		{
+			"type": "ambient",
+			"text": "Im Dunst der Ebene liegt ein Geruch von Asche."
+		},
+		{
+			"type": "ambient",
+			"text": "Ein Stern fällt langsam vom Himmel – leuchtend wie ein Traum."
+		},
+		{
+			"type": "ambient",
+			"text": "Das Wasser spiegelt eine andere Welt."
+		},
+		{
+			"type": "ambient",
+			"text": "Ein leises Flüstern begleitet dich durch die Höhle."
+		},
+		{
+			"type": "ambient",
+			"text": "Der Wind trägt vergessene Lieder zu dir."
+		},
+		{
+			"type": "ambient",
+			"text": "Dein Schatten scheint sich anders zu bewegen..."
+		},
+		{
+			"type": "ambient",
+			"text": "Der Boden knirscht – war da etwas unter der Erde?"
+		},
+		{
+			"type": "ambient",
+			"text": "Nebel zieht über das Land – die Sicht ist eingeschränkt."
+		}
+	],
+	"assets-list": [
+		{
+			"name": "Game DB",
+			"url": "/data/game.json",
+			"target_slug": "gameDb",
+			"required": true
+		},
+		{
+			"name": "Initial Data",
+			"url": "/data/game-init.json",
+			"target_slug": "initDb",
+			"required": false
+		},
+		{
+			"name": "Gaming Messages",
+			"url": "/data/game-notes.json",
+			"target_slug": "initMsg",
+			"required": false
+		},
+		{
+			"name": "Game Views",
+			"url": "/data/game-views.json",
+			"target_slug": "views",
+			"required": false
+		},
+		{
+			"name": "Loot Items",
+			"url": "/data/loot-items.json",
+			"target_slug": "loots",
+			"required": false
+		},
+		{
+			"name": "Main Navi",
+			"url": "/data/main-menu.json",
+			"target_slug": "menu",
+			"required": true
+		},
+		{
+			"name": "Demo Data 1",
+			"url": "/data/dating-app-1.json",
+			"target_slug": "demo",
+			"required": false
+		},
+		{
+			"name": "Demo Data 2",
+			"url": "/data/dating-app-2.json",
+			"target_slug": "demo",
+			"required": false
+		}
+	],
+	"game-msgs": [
+		{
+			"id": 1,
+			"type": "success",
+			"message": "Du spürst eine warme Energie – deine Wunden heilen sich!"
+		},
+		{
+			"id": 2,
+			"type": "success",
+			"message": "Ein Lichtstrahl trifft dich. Du fühlst dich plötzlich stärker."
+		},
+		{
+			"id": 3,
+			"type": "success",
+			"message": "Du findest einen geheimen Pfadder dir Zeit erspart."
+		},
+		{
+			"id": 4,
+			"type": "success",
+			"message": "Ein freundlicher Geist überreicht dir ein Geschenk."
+		},
+		{
+			"id": 5,
+			"type": "success",
+			"message": "Ein alter Zauber wurde aufgelöst – du fühlst dich erleichtert."
+		},
+		{
+			"id": 6,
+			"type": "success",
+			"message": "Die Sonne bricht durch die Wolken und füllt dich mit Hoffnung."
+		},
+		{
+			"id": 7,
+			"type": "success",
+			"message": "Du entdeckst eine Quelle reiner Magie – deine Kraft ist erneuert."
+		},
+		{
+			"id": 8,
+			"type": "success",
+			"message": "Ein Reisender segnet dich mit Glück auf deinem Weg."
+		},
+		{
+			"id": 9,
+			"type": "success",
+			"message": "Ein altes Lied erklingt – du fühlst dich inspiriert."
+		},
+		{
+			"id": 10,
+			"type": "success",
+			"message": "Ein Schutzkreis schützt dich vor dem nächsten Schaden."
+		},
+		{
+			"id": 11,
+			"type": "success",
+			"message": "Du wirst mit einer Vision der Zukunft erfüllt – und fühlst dich vorbereitet."
+		},
+		{
+			"id": 12,
+			"type": "success",
+			"message": "Du erhältst einen geheimen Segen – deine nächste Begegnung wird einfacher."
+		},
+		{
+			"id": 13,
+			"type": "success",
+			"message": "Ein Vogel bringt dir eine wertvolle Nachricht."
+		},
+		{
+			"id": 14,
+			"type": "success",
+			"message": "Du findest einen alten Brief – er stärkt deinen Mut."
+		},
+		{
+			"id": 15,
+			"type": "success",
+			"message": "Deine Sinne schärfen sich – du erkennst eine Gefahr im Voraus."
+		},
+		{
+			"id": 16,
+			"type": "error",
+			"message": "Ein plötzlicher Schatten streift dich – du verlierst Lebensenergie."
+		},
+		{
+			"id": 17,
+			"type": "error",
+			"message": "Du trittst in eine Falle und verletzt dich."
+		},
+		{
+			"id": 18,
+			"type": "error",
+			"message": "Ein magischer Sturm trifft dich mit voller Wucht."
+		},
+		{
+			"id": 19,
+			"type": "error",
+			"message": "Deine Tasche ist beschädigt – einige Gegenstände sind verloren."
+		},
+		{
+			"id": 20,
+			"type": "error",
+			"message": "Eine dunkle Präsenz raubt dir deine Kraft."
+		},
+		{
+			"id": 21,
+			"type": "error",
+			"message": "Du wirst von seltsamen Stimmen heimgesucht – deine Moral sinkt."
+		},
+		{
+			"id": 22,
+			"type": "error",
+			"message": "Dein Weg wird durch unheimliche Kreaturen blockiert."
+		},
+		{
+			"id": 23,
+			"type": "error",
+			"message": "Ein Dieb stiehlt dir unbemerkt etwas aus deinem Inventar."
+		},
+		{
+			"id": 24,
+			"type": "error",
+			"message": "Du verlierst die Orientierung in dichtem Nebel."
+		},
+		{
+			"id": 25,
+			"type": "error",
+			"message": "Ein Bann lähmt dich vorübergehend."
+		},
+		{
+			"id": 26,
+			"type": "error",
+			"message": "Dein Feuerholz ist nass – du kannst kein Lager machen."
+		},
+		{
+			"id": 27,
+			"type": "error",
+			"message": "Ein bösartiger Blick lähmt dich mit Angst."
+		},
+		{
+			"id": 28,
+			"type": "error",
+			"message": "Du stürzt in ein Erdloch und verletzt dich am Bein."
+		},
+		{
+			"id": 29,
+			"type": "error",
+			"message": "Dein Amulett zerbricht – ein Teil deiner Macht geht verloren."
+		},
+		{
+			"id": 30,
+			"type": "error",
+			"message": "Ein alter Fluch aktiviert sich plötzlich."
+		},
+		{
+			"id": 31,
+			"type": "info",
+			"message": "Du öffnest eine Truhe und findest: {item_name}!"
+		},
+		{
+			"id": 32,
+			"type": "info",
+			"message": "In einem Haufen Asche entdeckst du {item_name}."
+		},
+		{
+			"id": 33,
+			"type": "info",
+			"message": "Ein Monster ließ etwas fallen – {item_name} gehört jetzt dir."
+		},
+		{
+			"id": 34,
+			"type": "info",
+			"message": "Versteckt unter einem Stein findest du {item_name}."
+		},
+		{
+			"id": 35,
+			"type": "info",
+			"message": "Du erhältst {item_name} als Belohnung für deinen Mut."
+		},
+		{
+			"id": 36,
+			"type": "info",
+			"message": "Ein Lichtschein führt dich zu {item_name}."
+		},
+		{
+			"id": 37,
+			"type": "info",
+			"message": "Du gräbst im Sand und findest {item_name}."
+		},
+		{
+			"id": 38,
+			"type": "info",
+			"message": "Du hast {item_name} durch Zufall entdeckt!"
+		},
+		{
+			"id": 39,
+			"type": "info",
+			"message": "Du gewinnst {item_name} im Spiel gegen einen Händler."
+		},
+		{
+			"id": 40,
+			"type": "info",
+			"message": "Ein geheimnisvoller Fremder übergibt dir {item_name}."
+		},
+		{
+			"id": 41,
+			"type": "info",
+			"message": "{item_name} erscheint plötzlich in deiner Tasche."
+		},
+		{
+			"id": 42,
+			"type": "info",
+			"message": "Ein Rätsel wurde gelöst – als Belohnung bekommst du {item_name}."
+		},
+		{
+			"id": 43,
+			"type": "info",
+			"message": "Deine Geduld zahlt sich aus – du findest {item_name}."
+		},
+		{
+			"id": 44,
+			"type": "info",
+			"message": "Ein alter Baum wirft {item_name} ab."
+		},
+		{
+			"id": 45,
+			"type": "info",
+			"message": "Du findest {item_name} in einer alten Höhle."
+		},
+		{
+			"id": 46,
+			"type": "warning",
+			"message": "Sei vorsichtigFremder. Nicht alles ist so friedlich"
+		},
+		{
+			"id": 47,
+			"type": "warning",
+			"message": "Ich habe Geschichten gehört von einem Schatz tief im Osten."
+		},
+		{
+			"id": 48,
+			"type": "warning",
+			"message": "Du erinnerst mich an jemanden... einen alten Helden vielleicht."
+		},
+		{
+			"id": 49,
+			"type": "warning",
+			"message": "Meine Katze ist verschwunden. Wenn du sie findestbekommst du eine Belohnung."
+		},
+		{
+			"id": 50,
+			"type": "warning",
+			"message": "Man sagtdie Sterne flüstern mit jenen"
+		},
+		{
+			"id": 51,
+			"type": "warning",
+			"message": "Schau dich gut um. Manchmal versteckt sich das Wertvollste direkt vor deinen Augen."
+		},
+		{
+			"id": 52,
+			"type": "warning",
+			"message": "Die Dunkelheit wächst. Pass auf dich auf da draußen."
+		},
+		{
+			"id": 53,
+			"type": "warning",
+			"message": "Wenn du nach Süden gehstnimm genügend Tränke mit."
+		},
+		{
+			"id": 54,
+			"type": "warning",
+			"message": "Ich war einst Abenteurer wie du – bis ich ein Schwert im Knie hatte."
+		},
+		{
+			"id": 55,
+			"type": "warning",
+			"message": "Hast du etwas zu handeln? Ich suche besondere Materialien."
+		},
+		{
+			"id": 56,
+			"type": "warning",
+			"message": "Hier war früher eine große Stadt... jetzt ist nur noch Stille."
+		},
+		{
+			"id": 57,
+			"type": "warning",
+			"message": "Suchst du Arbeit? Ich habe da etwas für dich... wenn du mutig bist."
+		},
+		{
+			"id": 58,
+			"type": "warning",
+			"message": "Hörst du das? Etwas stimmt nicht mit diesem Ort."
+		},
+		{
+			"id": 59,
+			"type": "warning",
+			"message": "Der Fluss spricht. Hast du es bemerkt?"
+		},
+		{
+			"id": 60,
+			"type": "warning",
+			"message": "Einmal war ich auf der anderen Seite der Berge – dort gibt es Wunder."
+		},
+		{
+			"id": 61,
+			"type": "info",
+			"message": "Ein Schatten bewegt sich – bereite dich auf den Kampf vor!"
+		},
+		{
+			"id": 62,
+			"type": "info",
+			"message": "Dein Herz schlägt schneller – ein Gegner nähert sich!"
+		},
+		{
+			"id": 63,
+			"type": "info",
+			"message": "Du hast den falschen Pfad gewählt!ruft dein Feind."
+		},
+		{
+			"id": 64,
+			"type": "info",
+			"message": "Dein Gegner zieht seine Waffe. Keine Gnade!"
+		},
+		{
+			"id": 65,
+			"type": "info",
+			"message": "Du spürst feindliche Präsenz – der Kampf beginnt."
+		},
+		{
+			"id": 66,
+			"type": "info",
+			"message": "Das wird dir noch leid tun!schreit dein Widersacher."
+		},
+		{
+			"id": 67,
+			"type": "info",
+			"message": "Ein Geräusch hinter dir – du wirst angegriffen!"
+		},
+		{
+			"id": 68,
+			"type": "info",
+			"message": "Endlich ein würdiger Gegner!ruft der Feind."
+		},
+		{
+			"id": 69,
+			"type": "info",
+			"message": "Der Boden zittert – etwas Großes nähert sich."
+		},
+		{
+			"id": 70,
+			"type": "info",
+			"message": "Dein Instinkt war richtig – du bist nicht allein."
+		},
+		{
+			"id": 71,
+			"type": "success",
+			"message": "Du fühlst dich stärker – du bist aufgestiegen!"
+		},
+		{
+			"id": 72,
+			"type": "success",
+			"message": "Ein neues Level! Neue Kräfte erwachen in dir."
+		},
+		{
+			"id": 73,
+			"type": "success",
+			"message": "Dein Training zahlt sich aus – du bist gewachsen."
+		},
+		{
+			"id": 74,
+			"type": "success",
+			"message": "Du meisterst eine neue Fähigkeit."
+		},
+		{
+			"id": 75,
+			"type": "success",
+			"message": "Ein Licht durchdringt dich – du hast ein Level erreicht."
+		},
+		{
+			"id": 76,
+			"type": "success",
+			"message": "Dein Körper pulsiert vor Energie – Level Up!"
+		},
+		{
+			"id": 77,
+			"type": "success",
+			"message": "Erfahrung macht dich weiser – du bist bereit für mehr."
+		},
+		{
+			"id": 78,
+			"type": "success",
+			"message": "Die Luft um dich vibriert – du entwickelst dich weiter."
+		},
+		{
+			"id": 79,
+			"type": "success",
+			"message": "Du bist nun mächtiger als je zuvor."
+		},
+		{
+			"id": 80,
+			"type": "success",
+			"message": "Gut gemacht!hörst du eine Stimme in deinem Inneren."
+		},
+		{
+			"id": 81,
+			"type": "info",
+			"message": "Du hast einen neuen Auftrag erhalten."
+		},
+		{
+			"id": 82,
+			"type": "info",
+			"message": "Die Aufgabe ist abgeschlossen – kehre zum Auftraggeber zurück."
+		},
+		{
+			"id": 83,
+			"type": "info",
+			"message": "Ein Tagebucheintrag wurde aktualisiert."
+		},
+		{
+			"id": 84,
+			"type": "info",
+			"message": "Dein Fortschritt wurde gespeichert."
+		},
+		{
+			"id": 85,
+			"type": "info",
+			"message": "Du findest einen Hinweis auf das nächste Ziel."
+		},
+		{
+			"id": 86,
+			"type": "info",
+			"message": "Etwas stimmt nicht... die Quest entwickelt sich anders."
+		},
+		{
+			"id": 87,
+			"type": "info",
+			"message": "Ein neuer Ort wurde auf deiner Karte markiert."
+		},
+		{
+			"id": 88,
+			"type": "info",
+			"message": "Ein alter Bekannter hat dir eine neue Mission gegeben."
+		},
+		{
+			"id": 89,
+			"type": "info",
+			"message": "Du brauchst ein besonderes Item für diese Aufgabe."
+		},
+		{
+			"id": 90,
+			"type": "info",
+			"message": "Die Belohnung für diese Aufgabe wartet auf dich."
+		}
+	],
+	"iconlist": [
+		{
+			"id": 1,
+			"name": "Account",
+			"icon": "nwp-account",
+			"selected": false
+		},
+		{
+			"id": 2,
+			"name": "Archive",
+			"icon": "nwp-archive",
+			"selected": false
+		},
+		{
+			"id": 3,
+			"name": "Auto",
+			"icon": "nwp-auto",
+			"selected": false
+		},
+		{
+			"id": 4,
+			"name": "Auto Off",
+			"icon": "nwp-auto-off",
+			"selected": false
+		},
+		{
+			"id": 5,
+			"name": "Back",
+			"icon": "nwp-back",
+			"selected": false
+		},
+		{
+			"id": 6,
+			"name": "Bar",
+			"icon": "nwp-bar",
+			"selected": false
+		},
+		{
+			"id": 7,
+			"name": "Blank",
+			"icon": "nwp-blank",
+			"selected": false
+		},
+		{
+			"id": 8,
+			"name": "Burger",
+			"icon": "nwp-burger",
+			"selected": false
+		},
+		{
+			"id": 9,
+			"name": "Clear",
+			"icon": "nwp-clear",
+			"selected": false
+		},
+		{
+			"id": 10,
+			"name": "Close",
+			"icon": "nwp-close",
+			"selected": false
+		},
+		{
+			"id": 11,
+			"name": "Coins",
+			"icon": "nwp-coins",
+			"selected": false
+		},
+		{
+			"id": 12,
+			"name": "Cols",
+			"icon": "nwp-cols",
+			"selected": false
+		},
+		{
+			"id": 13,
+			"name": "Db",
+			"icon": "nwp-db",
+			"selected": false
+		},
+		{
+			"id": 14,
+			"name": "Dice",
+			"icon": "nwp-dice",
+			"selected": false
+		},
+		{
+			"id": 15,
+			"name": "Dice 1",
+			"icon": "nwp-dice-1",
+			"selected": false
+		},
+		{
+			"id": 16,
+			"name": "Dice 2",
+			"icon": "nwp-dice-2",
+			"selected": false
+		},
+		{
+			"id": 17,
+			"name": "Dice 3",
+			"icon": "nwp-dice-3",
+			"selected": false
+		},
+		{
+			"id": 18,
+			"name": "Dice 4",
+			"icon": "nwp-dice-4",
+			"selected": false
+		},
+		{
+			"id": 19,
+			"name": "Dice 5",
+			"icon": "nwp-dice-5",
+			"selected": false
+		},
+		{
+			"id": 20,
+			"name": "Dice 6",
+			"icon": "nwp-dice-6",
+			"selected": false
+		},
+		{
+			"id": 21,
+			"name": "Edit",
+			"icon": "nwp-edit",
+			"selected": false
+		},
+		{
+			"id": 22,
+			"name": "Enemy",
+			"icon": "nwp-enemy",
+			"selected": false
+		},
+		{
+			"id": 23,
+			"name": "Expand 1",
+			"icon": "nwp-expand-1",
+			"selected": false
+		},
+		{
+			"id": 24,
+			"name": "Expand 2",
+			"icon": "nwp-expand-2",
+			"selected": false
+		},
+		{
+			"id": 25,
+			"name": "Expand 3",
+			"icon": "nwp-expand-3",
+			"selected": false
+		},
+		{
+			"id": 26,
+			"name": "Film",
+			"icon": "nwp-film",
+			"selected": false
+		},
+		{
+			"id": 27,
+			"name": "Full 1",
+			"icon": "nwp-full-1",
+			"selected": false
+		},
+		{
+			"id": 28,
+			"name": "Full 2",
+			"icon": "nwp-full-2",
+			"selected": false
+		},
+		{
+			"id": 29,
+			"name": "Game",
+			"icon": "nwp-game",
+			"selected": false
+		},
+		{
+			"id": 30,
+			"name": "Grid",
+			"icon": "nwp-grid",
+			"selected": false
+		},
+		{
+			"id": 31,
+			"name": "Height",
+			"icon": "nwp-height",
+			"selected": false
+		},
+		{
+			"id": 32,
+			"name": "Home",
+			"icon": "nwp-home",
+			"selected": false
+		},
+		{
+			"id": 33,
+			"name": "Info",
+			"icon": "nwp-info",
+			"selected": false
+		},
+		{
+			"id": 34,
+			"name": "Key",
+			"icon": "nwp-key",
+			"selected": false
+		},
+		{
+			"id": 35,
+			"name": "Left",
+			"icon": "nwp-left",
+			"selected": false
+		},
+		{
+			"id": 36,
+			"name": "Mail",
+			"icon": "nwp-mail",
+			"selected": false
+		},
+		{
+			"id": 37,
+			"name": "Map 1",
+			"icon": "nwp-map-1",
+			"selected": false
+		},
+		{
+			"id": 38,
+			"name": "Map 2",
+			"icon": "nwp-map-2",
+			"selected": false
+		},
+		{
+			"id": 39,
+			"name": "Menu",
+			"icon": "nwp-menu",
+			"selected": false
+		},
+		{
+			"id": 40,
+			"name": "Menu1",
+			"icon": "nwp-menu1",
+			"selected": false
+		},
+		{
+			"id": 41,
+			"name": "Options",
+			"icon": "nwp-options",
+			"selected": false
+		},
+		{
+			"id": 42,
+			"name": "Pause",
+			"icon": "nwp-pause",
+			"selected": false
+		},
+		{
+			"id": 43,
+			"name": "Pencil",
+			"icon": "nwp-pencil",
+			"selected": false
+		},
+		{
+			"id": 44,
+			"name": "Play",
+			"icon": "nwp-play",
+			"selected": false
+		},
+		{
+			"id": 45,
+			"name": "Player",
+			"icon": "nwp-player",
+			"selected": false
+		},
+		{
+			"id": 46,
+			"name": "Pokeball",
+			"icon": "nwp-pokeball",
+			"selected": false
+		},
+		{
+			"id": 47,
+			"name": "Refresh",
+			"icon": "nwp-refresh",
+			"selected": false
+		},
+		{
+			"id": 48,
+			"name": "Refresh1",
+			"icon": "nwp-refresh1",
+			"selected": false
+		},
+		{
+			"id": 49,
+			"name": "Right",
+			"icon": "nwp-right",
+			"selected": false
+		},
+		{
+			"id": 50,
+			"name": "Rows",
+			"icon": "nwp-rows",
+			"selected": false
+		},
+		{
+			"id": 51,
+			"name": "Search",
+			"icon": "nwp-search",
+			"selected": false
+		},
+		{
+			"id": 52,
+			"name": "Send",
+			"icon": "nwp-send",
+			"selected": false
+		},
+		{
+			"id": 53,
+			"name": "Server",
+			"icon": "nwp-server",
+			"selected": false
+		},
+		{
+			"id": 54,
+			"name": "Settings1",
+			"icon": "nwp-settings1",
+			"selected": false
+		},
+		{
+			"id": 55,
+			"name": "Shield",
+			"icon": "nwp-shield",
+			"selected": false
+		},
+		{
+			"id": 56,
+			"name": "Skull 1",
+			"icon": "nwp-skull-1",
+			"selected": false
+		},
+		{
+			"id": 57,
+			"name": "Skull 2",
+			"icon": "nwp-skull-2",
+			"selected": false
+		},
+		{
+			"id": 58,
+			"name": "Star",
+			"icon": "nwp-star",
+			"selected": false
+		},
+		{
+			"id": 59,
+			"name": "Start",
+			"icon": "nwp-start",
+			"selected": false
+		},
+		{
+			"id": 60,
+			"name": "Tag",
+			"icon": "nwp-tag",
+			"selected": false
+		},
+		{
+			"id": 61,
+			"name": "Text Format",
+			"icon": "nwp-text_format",
+			"selected": false
+		},
+		{
+			"id": 62,
+			"name": "Thumb",
+			"icon": "nwp-thumb",
+			"selected": false
+		},
+		{
+			"id": 63,
+			"name": "Thumb Off",
+			"icon": "nwp-thumb-off",
+			"selected": false
+		},
+		{
+			"id": 64,
+			"name": "Tiles",
+			"icon": "nwp-tiles",
+			"selected": false
+		},
+		{
+			"id": 65,
+			"name": "Tools",
+			"icon": "nwp-tools",
+			"selected": false
+		},
+		{
+			"id": 66,
+			"name": "Upload",
+			"icon": "nwp-upload",
+			"selected": false
+		},
+		{
+			"id": 67,
+			"name": "User",
+			"icon": "nwp-user",
+			"selected": false
+		},
+		{
+			"id": 68,
+			"name": "Video",
+			"icon": "nwp-video",
+			"selected": false
+		},
+		{
+			"id": 69,
+			"name": "Video Off",
+			"icon": "nwp-video-off",
+			"selected": false
+		},
+		{
+			"id": 70,
+			"name": "Volume Off",
+			"icon": "nwp-volume-off",
+			"selected": false
+		},
+		{
+			"id": 71,
+			"name": "Volume On",
+			"icon": "nwp-volume-on",
+			"selected": false
+		},
+		{
+			"id": 72,
+			"name": "Warning",
+			"icon": "nwp-warning",
+			"selected": false
+		},
+		{
+			"id": 73,
+			"name": "Weight",
+			"icon": "nwp-weight",
+			"selected": false
+		},
+		{
+			"id": 74,
+			"name": "Wheel",
+			"icon": "nwp-wheel",
+			"selected": false
+		}
+	]
+}

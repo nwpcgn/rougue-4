@@ -1,0 +1,22 @@
+[
+	{
+		"href": "/",
+		"name": "Lobby",
+		"icon": "nwp-home"
+	},
+	{
+		"href": "/map",
+		"name": "Start Game",
+		"icon": "nwp-game"
+	},
+	{
+		"href": "/settings",
+		"name": "Map Settings",
+		"icon": "nwp-options"
+	},
+	{
+		"href": "/story",
+		"name": "Dungeon Lore",
+		"icon": "nwp-dice"
+	}
+]

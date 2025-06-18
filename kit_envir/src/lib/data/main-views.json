@@ -32,7 +32,15 @@
 		"heading": "Dungerue - Map",
 		"title": "Reado Empire",
 		"component": "dungeon",
-		"actions": "lobby,Close"
+		"actions": "lobby,Close",
+		"menu": [
+			{
+				"slug": "lobby",
+				"name": "Close",
+				"href": "/lobby",
+				"icon": "nwp-close"
+			}
+		]
 	},
 	"story": {
 		"slug": "story",
@@ -40,7 +48,15 @@
 		"heading": "Dungerue - Lore",
 		"title": "Darkblack",
 		"component": "slides",
-		"actions": "lobby,Close"
+		"actions": "lobby,Close",
+		"menu": [
+			{
+				"slug": "lobby",
+				"name": "Close",
+				"href": "/lobby",
+				"icon": "nwp-close"
+			}
+		]
 	},
 	"settings": {
 		"slug": "settings",
@@ -48,6 +64,14 @@
 		"heading": "Dungerue - Options",
 		"title": "Map Options",
 		"component": "options",
-		"actions": "lobby,Close"
+		"actions": "lobby,Close",
+		"menu": [
+			{
+				"slug": "lobby",
+				"name": "Close",
+				"href": "/lobby",
+				"icon": "nwp-close"
+			}
+		]
 	}
 }

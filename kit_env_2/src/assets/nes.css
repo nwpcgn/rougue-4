@@ -1,0 +1,34 @@
+@import './nes-css/nes-split-1.css';
+@import './nes-css/nes-split-icons.css';
+
+.nes-container {
+	background-color: var(--color-base-100);
+
+	margin: auto;
+}
+
+.nes-bar {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--spacing-sm);
+	padding: var(--spacing-sm) 0;
+	max-width: var(--page-width);
+
+	&.is-center {
+		justify-content: center;
+	}
+
+	&.is-vert {
+		flex-wrap: nowrap;
+		flex-direction: column;
+
+		gap: var(--spacing-md);
+		padding: var(--spacing-md);
+	}
+}
+
+.nes-conten {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-base);
+}

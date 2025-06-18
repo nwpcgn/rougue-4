@@ -1,0 +1,80 @@
+[
+	{
+		"name": "Game DB",
+		"url": "/data/game.json",
+		"target_slug": "gameDb",
+		"required": true
+	},
+	{
+		"name": "Initial Data",
+		"url": "/data/game-init.json",
+		"target_slug": "initDb",
+		"required": false
+	},
+	{
+		"name": "Gaming Messages",
+		"url": "/data/game-notes.json",
+		"target_slug": "initMsg",
+		"required": false
+	},
+	{
+		"name": "Game Views",
+		"url": "/data/game-views.json",
+		"target_slug": "views",
+		"required": false
+	},
+	{
+		"name": "Loot Items",
+		"url": "/data/loot-items.json",
+		"target_slug": "loots",
+		"required": false
+	},
+	{
+		"name": "Main Navi",
+		"url": "/data/main-menu.json",
+		"target_slug": "menu",
+		"required": true
+	},
+	{
+		"name": "Demo Data 1",
+		"url": "/data/dating-app-1.json",
+		"target_slug": "demo",
+		"required": false
+	},
+	{
+		"name": "Demo Data 2",
+		"url": "/data/dating-app-2.json",
+		"target_slug": "demo",
+		"required": false
+	},
+	{
+		"name": "bgG",
+		"url": "/media/bgG.mp3",
+		"target_slug": "audio",
+		"required": true
+	},
+	{
+		"name": "featured",
+		"url": "/media/featured.mp3",
+		"target_slug": "audio",
+		"required": true
+	},
+	{
+		"name": "researchClick",
+		"url": "/media/researchClick.mp3",
+		"target_slug": "audio",
+		"required": true
+	},
+	{
+		"name": "researchComplete",
+		"url": "/media/researchComplete.mp3",
+		"target_slug": "audio",
+		"required": true
+	},
+	{
+		"name": "researchInactive",
+		"url": "/media/researchInactive.mp3",
+		"target_slug": "audio",
+		"required": true
+	}
+]

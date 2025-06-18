@@ -1,0 +1,6 @@
+@import './nes-split-1.css';
+@import './nes-split-icons.css';
+
+.nes-container {
+	background-color: var(--color-base-100);
+}

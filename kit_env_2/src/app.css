@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Fira+Mono:wght@400;500;700&family=Press+Start+2P&family=Uncial+Antiqua&display=swap');
+@import 'tailwindcss';
+@import 'tailwindcss-animated';
+/* @plugin "daisyui"; */
+@layer base, utils, components;
+@import '@webtui/css/base.css';
+@import '@webtui/css/components/button.css';
+@import '@webtui/css/components/typography.css';
+@import '@webtui/css/components/dialog.css';
+@import '@webtui/css/utils/box.css';
+/* Utils */
+/*
+
+@import '@webtui/css';
+@import '@webtui/css/base.css';
+@import '@webtui/css/components/typography.css';
+@import '@webtui/css/components/button.css';
+
+
+@import '@webtui/css/utils/box.css';
+@import '@webtui/css/components/typography.css';
+
+  */
+
+/*    */
+
+@import './assets/nwp2.css';
+
+dialog::backdrop {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+#content {
+	display: flex;
+	flex-direction: column;
+	gap: 1lh;
+	padding: 2lh 2ch 1lh 2ch;
+	/* background-color: var(--background1); */
+}
+
+#buttons {
+	display: flex;
+	gap: 1ch;
+	justify-content: flex-end;
+}

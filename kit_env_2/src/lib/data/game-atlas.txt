@@ -1,0 +1,63 @@
+{
+	"game-atlas": {
+		"name": "Lobby",
+		"href": "/",
+		"icon": "nwp-lobby",
+		"slug": "start",
+		"title": "Dungerue Hall",
+		"component": "Lobby",
+		"actions": [
+			{
+				"name": "Map",
+				"slug": "map",
+				"href": "/map",
+				"icon": "nwp-map",
+				"title": "Dungeon Map",
+				"component": "Dungeon",
+				"actions": [
+					{
+						"slug": "start",
+						"href": "/",
+						"name": "Exit",
+						"icon": "nwp-close"
+					}
+				]
+			},
+			{
+				"slug": "story",
+				"name": "Lore",
+				"href": "/story",
+				"icon": "nwp-options",
+				"title": "Dungeon Lore",
+				"component": "Story",
+				"actions": [
+					{
+						"slug": "start",
+						"href": "/",
+						"name": "Exit",
+						"icon": "nwp-close"
+					}
+				]
+			},
+			{
+				"slug": "settings",
+				"name": "Settings",
+				"href": "/settings",
+				"icon": "nwp-story",
+				"title": "Map Settings",
+				"component": "Settingns",
+				"actions": [
+					{
+						"slug": "start",
+						"href": "/",
+						"name": "Exit",
+						"icon": "nwp-close"
+					}
+				]
+			}
+		],
+		"_dev": {
+			"info": ""
+		}
+	}
+}

@@ -1,0 +1,54 @@
+{
+	"lobby": {
+		"slug": "lobby",
+		"icon": "nwp-lobby",
+		"heading": "Dungerue - Lobby",
+		"title": "Dungerue Manner",
+		"component": "generator",
+		"menu": [
+			{
+				"slug": "map",
+				"name": "Map",
+				"href": "/map",
+				"icon": "nwp-map"
+			},
+			{
+				"slug": "story",
+				"name": "Lore",
+				"href": "/story",
+				"icon": "nwp-story"
+			},
+			{
+				"slug": "settings",
+				"name": "Settings",
+				"href": "/settings",
+				"icon": "nwp-settings"
+			}
+		]
+	},
+	"map": {
+		"slug": "map",
+		"icon": "nwp-map",
+		"heading": "Dungerue - Map",
+		"title": "Reado Empire",
+		"component": "dungeon",
+		"actions": "lobby,Close"
+	},
+	"story": {
+		"slug": "story",
+		"icon": "nwp-story",
+		"heading": "Dungerue - Lore",
+		"title": "Darkblack",
+		"component": "slides",
+		"actions": "lobby,Close"
+	},
+	"settings": {
+		"slug": "settings",
+		"icon": "nwp-settings",
+		"heading": "Dungerue - Options",
+		"title": "Map Options",
+		"component": "options",
+		"actions": "lobby,Close"
+	}
+}
+
