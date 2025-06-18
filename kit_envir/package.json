@@ -38,7 +38,9 @@
 	},
 	"dependencies": {
 		"@supabase/supabase-js": "^2.50.0",
+		"@webtui/css": "^0.1.1",
 		"rot-js": "^2.2.1",
-		"svelte-canvas": "^2.0.2"
+		"svelte-canvas": "^2.0.2",
+		"tailwindcss-animated": "^2.0.0"
 	}
 }

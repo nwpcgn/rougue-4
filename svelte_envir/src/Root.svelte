@@ -2,7 +2,7 @@
 	import { app } from './lib/app.svelte.ts'
 	import AppBar from './lib/AppBar.svelte'
 	import Docks from './Docks.svelte'
-	import LevelGen from './lib/game/components/LevelGen.svelte';
+	import LevelGen from './lib/game/components/LevelGen.svelte'
 	let views = $state.raw({
 		start: {
 			slug: 'start',
@@ -76,9 +76,7 @@
 	</div>
 </div>
 
-<aside class="page-right">
-
-</aside>
+<aside class="page-right"></aside>
 <Docks></Docks>
 
 {#snippet iconT(name, style = '')}

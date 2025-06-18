@@ -1,4 +1,10 @@
-@mixin span-style-is-icon($color, $background-color, $display, $width, $font-size) {
+@mixin span-style-is-icon(
+	$color,
+	$background-color,
+	$display,
+	$width,
+	$font-size
+) {
 	display: $display;
 	align-items: center;
 	justify-content: center;
@@ -56,7 +62,13 @@
 			height: 2.7em;
 		}
 		&:last-child {
-			@include span-style-is-icon($color, $background, inline-block, 6em, 0.88em);
+			@include span-style-is-icon(
+				$color,
+				$background,
+				inline-block,
+				6em,
+				0.88em
+			);
 
 			box-shadow:
 				$box-shadow-first-two,

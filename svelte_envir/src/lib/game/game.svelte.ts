@@ -91,7 +91,7 @@ export class Game {
 	init(daten) {
 		this.assets.loot = this.shuffle(daten.loot)
 		this.assets.fighter = this.shuffle(daten.fighter)
-		this.#name = "Dungerue"
+		this.#name = 'Dungerue'
 		this.createMap()
 		this.createChars()
 		this.printMap()

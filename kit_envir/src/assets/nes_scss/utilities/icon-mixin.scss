@@ -20,7 +20,10 @@
 			}
 		}
 		// use index of the highest count to get the corresponding matrix color
-		$default-color: nth($colors, nth($matrix-colors, index($counts, max($counts...))));
+		$default-color: nth(
+			$colors,
+			nth($matrix-colors, index($counts, max($counts...)))
+		);
 	}
 
 	@for $i from 1 through length($matrix) {
@@ -41,7 +44,12 @@
 					$moz: $moz + ($j * $size) + ' ' + ($i * $size) + ' 0 0.020em';
 				} @else {
 					$ret: $ret + ($j * $size) + ' ' + ($i * $size) + ' ' + $color;
-					$moz: $moz + ($j * $size) + ' ' + ($i * $size) + ' 0 0.020em ' + $color;
+					$moz: $moz +
+						($j * $size) +
+						' ' +
+						($i * $size) +
+						' 0 0.020em ' +
+						$color;
 				}
 			}
 		}

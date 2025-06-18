@@ -1,0 +1,63 @@
+{
+	"start": {
+		"slug": "start",
+		"name": "Lobby",
+		"icon": "nwp-home",
+		"menu": [
+			{
+				"id": "map",
+				"slug": "map",
+				"name": "Start Game",
+				"icon": "nwp-game"
+			},
+			{
+				"id": "settings",
+				"slug": "settings",
+				"name": "Map Settings",
+				"icon": "nwp-options"
+			},
+			{
+				"id": "story",
+				"slug": "story",
+				"name": "Dungeon Lore",
+				"icon": "nwp-dice"
+			}
+		]
+	},
+	"map": {
+		"slug": "map",
+		"name": "Battle Map",
+		"icon": "nwp-game",
+		"menu": [
+			{
+				"slug": "start",
+				"name": "Exit",
+				"icon": "nwp-close"
+			}
+		]
+	},
+	"settings": {
+		"slug": "settings",
+		"name": "Map Settings",
+		"icon": "nwp-options",
+		"menu": [
+			{
+				"slug": "start",
+				"name": "Exit",
+				"icon": "nwp-close"
+			}
+		]
+	},
+	"story": {
+		"slug": "story",
+		"name": "Dungeon Lore",
+		"icon": "nwp-dice",
+		"menu": [
+			{
+				"slug": "start",
+				"name": "Exit",
+				"icon": "nwp-close"
+			}
+		]
+	}
+}

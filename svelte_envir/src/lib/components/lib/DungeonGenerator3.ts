@@ -212,5 +212,4 @@ export class DungeonGenerator {
 	}
 }
 
-
 export default DungeonGenerator

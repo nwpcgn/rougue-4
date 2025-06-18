@@ -1,7 +1,5 @@
 <script lang="ts">
-
 	import { sleep, Splash, NesContainer, InfoPanel, Options } from './lib'
-
 
 	let current = $state('start')
 

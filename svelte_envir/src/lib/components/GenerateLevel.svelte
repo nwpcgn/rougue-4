@@ -7,7 +7,7 @@
 
 	const createMap = async () => {
 		mapData = {}
-		console.log(mapData);
+		console.log(mapData)
 		await sleep(500)
 		const mapSize = { x: 75, y: 75 }
 		const generator = new DungeonGenerator(mapSize, 50, 4, 16)
