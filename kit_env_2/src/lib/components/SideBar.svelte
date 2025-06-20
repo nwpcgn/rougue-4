@@ -1,5 +1,8 @@
 <script lang="ts">
+	import ConfigBox from './ConfigBox.svelte'
+
 	import { mainMenu } from '$lib'
+	import { game } from '$lib/game.svelte.ts'
 	let { children, currentPath, isClose = $bindable(false) } = $props()
 </script>
 
@@ -19,6 +22,10 @@
 							</li>
 						{/each}
 					</ul>
+				</details>
+				<details open>
+					<summary>Map Settings</summary>
+					<ConfigBox></ConfigBox>
 				</details>
 			</div>
 		</div>

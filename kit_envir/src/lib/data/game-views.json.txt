@@ -4,19 +4,19 @@
 			"slug": "lobby",
 			"name": "Lobby",
 			"href": "/lobby",
-			"icon": "nwp-home"
+			"icon": "nwp-lobby"
 		},
 		{
 			"slug": "map",
 			"name": "Map",
 			"href": "/map",
-			"icon": "nwp-game"
+			"icon": "nwp-map"
 		},
 		{
 			"slug": "story",
 			"name": "Lore",
 			"href": "/story",
-			"icon": "nwp-dice"
+			"icon": "nwp-story"
 		},
 		{
 			"slug": "settings",
@@ -28,7 +28,7 @@
 	"views": {
 		"lobby": {
 			"slug": "lobby",
-			"icon": "nwp-home",
+			"icon": "nwp-lobby",
 			"heading": "Dungerue - Lobby",
 			"title": "Dungerue Manner",
 			"component": "generator",
@@ -36,7 +36,7 @@
 		},
 		"map": {
 			"slug": "map",
-			"icon": "nwp-game",
+			"icon": "nwp-map",
 			"heading": "Dungerue - Map",
 			"title": "Reado Empire",
 			"component": "dungeon",
@@ -44,7 +44,7 @@
 		},
 		"story": {
 			"slug": "story",
-			"icon": "nwp-dice",
+			"icon": "nwp-story",
 			"heading": "Dungerue - Lore",
 			"title": "Darkblack",
 			"component": "slides",

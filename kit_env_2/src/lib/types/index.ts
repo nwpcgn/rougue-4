@@ -1,21 +1,23 @@
 import type {
+	Game,
 	Assets,
-	Corridors,
-	DungeonGame,
-	DungeonMap,
-	Fighter,
 	Loot,
+	Fighter,
+	Player,
+	DungeonMap,
+	Rooms,
 	Position,
-	Rooms
+	Corridors
 } from './Game'
 
 export type {
+	Game,
 	Assets,
-	Corridors,
-	DungeonGame,
-	DungeonMap,
-	Fighter,
 	Loot,
+	Fighter,
+	Player,
+	DungeonMap,
+	Rooms,
 	Position,
-	Rooms
+	Corridors
 }

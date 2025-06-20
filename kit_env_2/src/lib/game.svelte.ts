@@ -1,15 +1,18 @@
 import type {
+	Game,
+	Assets,
+	Loot,
+	Fighter,
+	Player,
 	DungeonMap,
 	Rooms,
-	Corridors,
 	Position,
-	Fighter,
-	Assets,
-	Loot
-} from './types'
+	Corridors
+} from './types/Game'
+
 import generateMap from './game/generateMap'
 
-class Player {
+class Fighter {
 	name: string = $state('')
 	hp: number = $state(0)
 	atc: number = $state(0)
@@ -17,8 +20,6 @@ class Player {
 	mana: number = $state(0)
 	maxHp: number = $state(0)
 	maxMana: number = $state(0)
-	level: number = $state(0)
-	inventory: Loot = $state(null)
 	constructor({ name, hp, atc, def, mana }) {
 		this.name = name
 		this.hp = hp
@@ -27,12 +28,25 @@ class Player {
 		this.mana = mana
 		this.maxHp = this.hp
 		this.maxMana = this.mana
+	}
+}
+
+class Player {
+	name: string = $state('')
+	level: number = $state(0)
+	hero: Fighter = $state(null)
+	inventory: Loot[] = $state()
+	constructor(name: string, hero: Fighter) {
+		this.name = name
+		this.hero = new Fighter(hero)
 		this.level = 1
-		this.inventory = {
-			name: 'Health Potion',
-			type: 'potion',
-			value: 7
-		}
+		this.inventory = [
+			{
+				name: 'Health Potion',
+				type: 'potion',
+				value: 7
+			}
+		]
 	}
 }
 
@@ -50,7 +64,7 @@ class Dungeon {
 	})
 	generate(width = 40, height = 40, type = 'Uniform') {
 		const data = generateMap(width, height, type)
-		console.log(data)
+		// console.log(data)
 		this.map = data.map
 		this.rooms = data.rooms
 		this.items = data.items
@@ -60,14 +74,19 @@ class Dungeon {
 		this.corridors = data.corridors
 		this.outside = data.outside
 	}
+	updatePosition(obj: Position) {
+		this.position = obj
+	}
 }
 
 class Game {
 	#width: number = $state(25)
 	#height: number = $state(25)
-	#size: number = $state(20)
+	#size: number = $state(40)
 	#type: string = $state('Uniform')
 	name: string = $state('')
+	#renderLock: boolean = $state(false)
+	#keyLock: boolean = $state(false)
 	gridStyle: string = $derived(
 		`--grid-cols: ${this.#width};--grid-rows: ${this.#height};--grid-size: ${this.#size}px;`
 	)
@@ -76,7 +95,7 @@ class Game {
 		fighter: []
 	})
 	dungeon: DungeonMap = new Dungeon()
-	player: Fighter = $state(null)
+	player: Player = $state(null)
 	enemy: Fighter = $state(null)
 	constructor(name = '') {
 		this.name = name
@@ -103,8 +122,12 @@ class Game {
 	createChars() {
 		const p = this.assets.fighter?.shift()
 		const e = this.assets.fighter?.shift()
-		this.player = new Player(p)
-		this.enemy = new Player(e)
+		this.player = new Player('Caryn Dynasty', p)
+		this.enemy = new Fighter(e)
+	}
+
+	updateHero(obj = { x: 0, y: 0 }) {
+		this.dungeon.updatePosition(obj)
 	}
 
 	get width() {
@@ -137,6 +160,20 @@ class Game {
 
 	set type(value = 'Uniform') {
 		this.#type = value
+	}
+
+	set keyLock(value = false) {
+		this.#keyLock = value
+	}
+	get keyLock() {
+		return this.#keyLock
+	}
+	
+	set renderLock(value = false) {
+		this.#renderLock = value
+	}
+	get renderLock() {
+		return this.#renderLock
 	}
 }
 
@@ -175,4 +212,4 @@ class Item {
 	}
 }
 
-export const game = new Game('Dungerue Manner')
+export const game: Game = new Game('Dungerue Manner')

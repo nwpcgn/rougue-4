@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { game } from '$lib/game.svelte.ts'
+
 	let { data } = $props()
 </script>
 

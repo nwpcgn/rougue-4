@@ -1,25 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Fira+Mono:wght@400;500;700&family=Press+Start+2P&family=Uncial+Antiqua&display=swap');
 
-@layer base, utils, components;
 @import 'tailwindcss';
 @import 'tailwindcss-animated';
 
-
-@layer base {
-	:root {
-		--font-family: 'Fira Mono', monospace;
-		--background0: oklch(91.637% 0.034 90.515);
-		--background1: oklch(88.272% 0.049 91.774);
-		--background2: oklch(84.133% 0.065 90.856);
-		--background3: #d6d3d1;
-		--foreground0: #292524;
-		--foreground1: #44403c;
-		--foreground2: #525252;
-		--font-size: 18px;
-		--line-height: 1.4;
-		--box-border-color: var(--background1);
-	}
-}
+@layer base, utils, components;
 
 @import './assets/web/webtui.css';
 @import './assets/nwp2.css';

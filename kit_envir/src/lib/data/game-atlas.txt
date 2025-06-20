@@ -2,7 +2,7 @@
 	"game-atlas": {
 		"name": "Lobby",
 		"href": "/",
-		"icon": "nwp-home",
+		"icon": "nwp-lobby",
 		"slug": "start",
 		"title": "Dungerue Hall",
 		"component": "Lobby",
@@ -11,7 +11,7 @@
 				"name": "Map",
 				"slug": "map",
 				"href": "/map",
-				"icon": "nwp-game",
+				"icon": "nwp-map",
 				"title": "Dungeon Map",
 				"component": "Dungeon",
 				"actions": [
@@ -43,7 +43,7 @@
 				"slug": "settings",
 				"name": "Settings",
 				"href": "/settings",
-				"icon": "nwp-dice",
+				"icon": "nwp-story",
 				"title": "Map Settings",
 				"component": "Settingns",
 				"actions": [

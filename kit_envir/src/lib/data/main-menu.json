@@ -1,26 +1,32 @@
 [
 	{
+		"slug": "root",
+		"name": "Landing",
+		"href": "/",
+		"icon": "nwp-start"
+	},
+	{
 		"slug": "lobby",
 		"name": "Lobby",
 		"href": "/lobby",
-		"icon": "nwp-home"
+		"icon": "nwp-lobby"
 	},
 	{
 		"slug": "map",
 		"name": "Map",
 		"href": "/map",
-		"icon": "nwp-game"
+		"icon": "nwp-map"
 	},
 	{
 		"slug": "story",
 		"name": "Lore",
 		"href": "/story",
-		"icon": "nwp-dice"
+		"icon": "nwp-story"
 	},
 	{
 		"slug": "settings",
 		"name": "Settings",
 		"href": "/settings",
-		"icon": "nwp-options"
+		"icon": "nwp-settings"
 	}
 ]

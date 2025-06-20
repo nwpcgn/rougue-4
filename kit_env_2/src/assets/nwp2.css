@@ -30,7 +30,7 @@
 		--foreground2: #525252;
 	}
 
-	[data-webtui-theme='dark'] {
+	/* 	[data-webtui-theme='dark'] {
 		--background0: #000;
 		--background1: #222;
 		--background2: #444;
@@ -38,7 +38,7 @@
 		--foreground0: #fff;
 		--foreground1: #ccc;
 		--foreground2: #999;
-	}
+	} */
 
 	/* :root {
 		--background0: #fff;
@@ -78,6 +78,16 @@
 		margin: 0;
 		position: relative;
 		overflow-x: hidden;
+		--font-weight-bold: 700;
+		--font-weight-normal: 400;
+		--font-family: 'Fira Mono', monospace;
+		--background0: oklch(91.637% 0.034 90.515);
+		--background1: oklch(88.272% 0.049 91.774);
+		--background2: oklch(84.133% 0.065 90.856);
+		--background3: #d6d3d1;
+		--foreground0: #292524;
+		--foreground1: #44403c;
+		--foreground2: #525252;
 	}
 
 	body:has([data-layout]) {

@@ -1,4 +1,43 @@
-﻿interface DungeonMap {
+﻿export interface Game {
+	width: number
+	height: number
+	size: number
+	type: string
+	name: string
+	gridStyle: string
+	assets: Assets
+	enemy: Fighter
+	player: Player
+	dungeon: Dungeon
+	renderLock: boolean
+	keyLock: boolean
+}
+export interface Assets {
+	loot?: Loot[] | null
+	fighter?: Fighter[] | null
+}
+export interface Loot {
+	name: string
+	type: string
+	value: number
+}
+export interface Fighter {
+	name: string
+	hp: number
+	atc: number
+	def: number
+	mana: number
+	maxHp: number
+	maxMana: number
+}
+
+export interface Player {
+	level: number
+	name: string
+	hero: Fighter
+	inventory?: Loot[] | null
+}
+interface DungeonMap {
 	map?: (string[] | null)[] | null
 	rooms?: Rooms[] | null
 	items?: string[] | null
@@ -6,9 +45,6 @@
 	enemys?: string[] | null
 	position: Position
 	corridors?: Corridors[] | null
-	type: string
-	width: number
-	height: number
 	outside?: string[] | null
 }
 interface Rooms {
@@ -33,43 +69,14 @@ interface Corridors {
 	_endsWithAWall: boolean
 	corrId: number
 }
-
-interface DungeonGame {
-	width: number
-	height: number
-	size: number
-	type: string
-	player: Fighter
-	enemy: Fighter
-	assets: Assets
-	level: Level
-}
-
-interface Assets {
-	loot?: Loot[] | null
-	fighter?: Fighter[] | null
-}
-
-interface Fighter {
-	name: string
-	hp: number
-	atc: number
-	def: number
-	mana: number
-}
-interface Loot {
-	name: string
-	type: string
-	value: number
-}
-
 export {
+	Game,
 	Assets,
-	Corridors,
-	DungeonGame,
-	DungeonMap,
-	Fighter,
 	Loot,
+	Fighter,
+	Player,
+	DungeonMap,
+	Rooms,
 	Position,
-	Rooms
+	Corridors
 }
