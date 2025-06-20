@@ -1,19 +1,16 @@
 <script lang="ts">
-	import ConfigBox from './ConfigBox.svelte'
-
+	import Details from './Details.svelte'
 	import { mainMenu } from '$lib'
-	import { game } from '$lib/game.svelte.ts'
 	let { children, currentPath, isClose = $bindable(false) } = $props()
 </script>
 
-<aside class="sidebar" style="--sb-width: 30ch;">
+<aside class="sidebar" style="--sb-width: {isClose ? '0ch' : '30ch'};">
 	<nav box-="square" shear-="top" id="sidebar">
 		<div id="category-container">
 			<div id="category-list">
-				<details open>
-					<summary>Main Navigation</summary>
+				<Details label="Main Navigation" isOpen>
 					<ul>
-						{#each mainMenu as { name, href, icon }}
+						{#each mainMenu as { name, href, icon } (href)}
 							<li>
 								<a href="#{href}" class:active={currentPath === href}>
 									{@render iconT(icon)}
@@ -22,14 +19,10 @@
 							</li>
 						{/each}
 					</ul>
-				</details>
-				<details open>
-					<summary>Map Settings</summary>
-					<ConfigBox></ConfigBox>
-				</details>
+				</Details>
 			</div>
 		</div>
-		<div id="sidebar-vim-nav-container">
+		<div id="sidebar-nav-container">
 			{@render children?.()}
 		</div>
 	</nav>
@@ -66,36 +59,6 @@
 			padding: 0 1ch;
 			overflow-y: auto;
 		}
-	}
-
-	details {
-		summary {
-			font-weight: var(--font-weight-bold);
-			cursor: row-resize;
-			&::marker {
-				color: var(--foreground2);
-				content: '\2193 ';
-			}
-
-			&:hover,
-			&:focus {
-				background-color: var(--background1);
-			}
-		}
-
-		&[open] {
-			summary {
-				&::marker {
-					content: '\2191 ';
-				}
-			}
-		}
-	}
-
-	details[open] a.hidden,
-	details.hidden,
-	.hidden {
-		display: none;
 	}
 
 	ul a[href] {

@@ -1,13 +1,9 @@
 <script lang="ts">
-	let { showModal = $bindable(), children, footer, callBack } = $props()
+	let { showModal = $bindable(), children, footer } = $props()
 	let dialog = $state() // HTMLDialogElement
 
 	const handleCloseAction = () => {
 		showModal = false
-	}
-
-	const handleAction = () => {
-		if (callBack) callBack()
 	}
 
 	$effect(() => {
@@ -23,7 +19,6 @@
 				{#if footer}
 					{@render footer()}
 				{:else}
-					<!-- <button box-="round" onclick={handleAction}>Action</button> -->
 					<form method="dialog">
 						<button box-="round">Cancel</button>
 					</form>

@@ -53,7 +53,7 @@ export function generateMap(
 	const map: string[][] = Array.from({ length: height }, () =>
 		Array(width).fill(' ')
 	)
-	const freeCells: string[] = []
+	let freeCells: string[] = []
 	const zeroCells: string[] = []
 	const outside: string[] = []
 	const rooms: Room = []
@@ -91,6 +91,7 @@ export function generateMap(
 
 		doors.forEach(({ x, y }) => {
 			map[y][x] = 'D'
+			freeCells = freeCells.filter((cell) => cell !== `${x},${y}`)
 		})
 
 		for (let y = r._y1; y <= r._y2; y++) {
@@ -108,12 +109,12 @@ export function generateMap(
 		}
 	}
 	const generateBoxes = (freeCells) => {
-		const length1 = randNum(6, 10)
-
+		const length1 = randNum(2, Math.floor(width * height * 0.01))
+		// console.log(width * height, Math.floor((width * height) * 0.01))
 		for (let i = 0; i < length1; i++) {
 			const index = Math.floor(ROT.RNG.getUniform() * freeCells.length)
 			const key = freeCells.splice(index, 1)[0]
-			const [x, y] = key.split(',')
+			// const [x, y] = key.split(',')
 			// items.push({ x: parseInt(x), y: parseInt(y), slug: `${i}` })
 			items.push(key)
 		}

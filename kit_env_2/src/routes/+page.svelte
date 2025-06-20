@@ -1,15 +1,25 @@
 <script lang="ts">
-	import { game } from '$lib/game.svelte.ts'
-
+	import { sleep } from '$lib'
+	import { goto } from '$app/navigation'
+	import Loader from '$lib/components/Loader.svelte'
 	let { data } = $props()
+	const init = async () => {
+		await sleep(3333)
+		goto('#/lobby')
+		return true
+	}
 </script>
 
 <svelte:head>
 	<title>Loading - Dungerue Hall</title>
 </svelte:head>
 
-<section class="page center nwp">
-	<header>
-		<h1>Start</h1>
-	</header>
-</section>
+{#await init()}
+	<Loader><span>{data.gameName}</span></Loader>
+{:then value}
+	{#if value}
+		<section class="page center nwp">
+			<h1>Redirect</h1>
+		</section>
+	{/if}
+{/await}

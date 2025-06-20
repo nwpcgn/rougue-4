@@ -5,7 +5,7 @@ export const load = (async () => {
 		slug: 'map',
 		icon: 'nwp-logo-map',
 		heading: 'Dungerue - Map',
-		title: 'Reado Empire',
+		title: 'Map: Reado Empire',
 		component: 'dungeon',
 		actions: 'lobby,Close'
 	}

@@ -1,43 +1,51 @@
 ﻿export interface Game {
-	width: number
-	height: number
-	size: number
-	type: string
 	name: string
 	gridStyle: string
-	assets: Assets
-	enemy: Fighter
+	lock: Lock
+	assets?: Assets[] | null
+	opponents?: Fighter[] | null
 	player: Player
+	grid: Grid
 	dungeon: Dungeon
-	renderLock: boolean
-	keyLock: boolean
+	msg: Note
+}
+export interface Lock {
+	render: boolean
+	keys: boolean
 }
 export interface Assets {
-	loot?: Loot[] | null
-	fighter?: Fighter[] | null
-}
-export interface Loot {
+	id: string
 	name: string
 	type: string
 	value: number
 }
 export interface Fighter {
+	id: string
 	name: string
-	hp: number
-	atc: number
-	def: number
-	mana: number
-	maxHp: number
-	maxMana: number
+	info: string
+	health: number
+	maxHealth: number
+	attacks?: Attacks[] | null
 }
-
+export interface Attacks {
+	name: string
+	dice: string
+	damage: number
+	description: string
+}
 export interface Player {
 	level: number
 	name: string
-	hero: Fighter
-	inventory?: Loot[] | null
+	fighter?: Fighter[] | null
+	inventory?: Assets[] | null
 }
-interface DungeonMap {
+export interface Grid {
+	width: number
+	height: number
+	size: number
+	type: string
+}
+export interface DungeonMap {
 	map?: (string[] | null)[] | null
 	rooms?: Rooms[] | null
 	items?: string[] | null
@@ -47,7 +55,7 @@ interface DungeonMap {
 	corridors?: Corridors[] | null
 	outside?: string[] | null
 }
-interface Rooms {
+export interface Rooms {
 	x1: number
 	y1: number
 	x2: number
@@ -57,11 +65,11 @@ interface Rooms {
 	centerY: number
 	roomId: number
 }
-interface Position {
+export interface Position {
 	x: number
 	y: number
 }
-interface Corridors {
+export interface Corridors {
 	_startX: number
 	_startY: number
 	_endX: number
@@ -69,10 +77,18 @@ interface Corridors {
 	_endsWithAWall: boolean
 	corrId: number
 }
-export {
+export interface Note {
+	title: string
+	type: string
+	text: string
+	isOpen: boolean
+	isReady: boolean
+}
+
+/* export {
 	Game,
 	Assets,
-	Loot,
+	Grid,
 	Fighter,
 	Player,
 	DungeonMap,
@@ -80,3 +96,4 @@ export {
 	Position,
 	Corridors
 }
+ */

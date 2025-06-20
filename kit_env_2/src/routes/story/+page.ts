@@ -7,6 +7,10 @@ export const load = (async () => {
 		heading: 'Dungerue - Lore',
 		title: 'Darkblack',
 		component: 'slides',
-		actions: 'lobby,Close'
+		actions: 'lobby,Close',
+		msg: {
+			type: 'info',
+			text: 'Sei vorsichtig Fremder. Nicht alles ist so friedlich'
+		}
 	}
 }) satisfies PageLoad

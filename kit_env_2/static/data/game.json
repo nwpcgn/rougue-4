@@ -1,289 +1,184 @@
 {
 	"loot": [
 		{
+			"id": 1,
 			"name": "Rusty Sword",
-			"type": "weapon",
-			"value": 6
-		},
-		{
-			"name": "Iron Axe",
-			"type": "weapon",
-			"value": 7
-		},
-		{
-			"name": "Flame Bow",
 			"type": "weapon",
 			"value": 5
 		},
 		{
-			"name": "Shadow Dagger",
+			"id": 2,
+			"name": "Iron Axe",
 			"type": "weapon",
-			"value": 3
+			"value": 8
 		},
 		{
-			"name": "Blade of Eternity",
+			"id": 3,
+			"name": "Flame Bow",
 			"type": "weapon",
 			"value": 4
 		},
 		{
-			"name": "Leather Armor",
-			"type": "armor",
-			"value": 2
+			"id": 4,
+			"name": "Shadow Dagger",
+			"type": "weapon",
+			"value": 7
 		},
 		{
-			"name": "Iron Plate",
+			"id": 5,
+			"name": "Blade of Eternity",
+			"type": "weapon",
+			"value": 6
+		},
+		{
+			"id": 6,
+			"name": "Leather Armor",
 			"type": "armor",
 			"value": 9
 		},
 		{
+			"id": 7,
+			"name": "Iron Plate",
+			"type": "armor",
+			"value": 7
+		},
+		{
+			"id": 8,
 			"name": "Magic Robe",
 			"type": "armor",
 			"value": 7
 		},
 		{
+			"id": 9,
 			"name": "Dragon Scale Armor",
 			"type": "armor",
-			"value": 2
-		},
-		{
-			"name": "Aegis of the Ancients",
-			"type": "armor",
-			"value": 8
-		},
-		{
-			"name": "Health Potion",
-			"type": "potion",
-			"value": 10
-		},
-		{
-			"name": "Mana Potion",
-			"type": "potion",
-			"value": 2
-		},
-		{
-			"name": "Stamina Elixir",
-			"type": "potion",
-			"value": 2
-		},
-		{
-			"name": "Potion of Invincibility",
-			"type": "potion",
-			"value": 5
-		},
-		{
-			"name": "Elixir of Time",
-			"type": "potion",
 			"value": 9
 		},
 		{
-			"name": "Bronze Spear",
-			"type": "weapon",
-			"value": 3
-		},
-		{
-			"name": "Silver Hammer",
-			"type": "weapon",
-			"value": 5
-		},
-		{
-			"name": "Storm Staff",
-			"type": "weapon",
-			"value": 2
-		},
-		{
-			"name": "Vampire Fang Blade",
-			"type": "weapon",
-			"value": 8
-		},
-		{
-			"name": "Phoenix Claw",
-			"type": "weapon",
+			"id": 10,
+			"name": "Aegis of the Ancients",
+			"type": "armor",
 			"value": 4
 		},
 		{
-			"name": "Chainmail Vest",
-			"type": "armor",
+			"id": 11,
+			"name": "Health Potion",
+			"type": "potion",
 			"value": 5
 		},
 		{
-			"name": "Runed Cloak",
-			"type": "armor",
-			"value": 5
-		},
-		{
-			"name": "Obsidian Shield",
-			"type": "armor",
-			"value": 6
-		},
-		{
-			"name": "Celestial Plate",
-			"type": "armor",
-			"value": 9
-		},
-		{
-			"name": "Astral Shell",
-			"type": "armor",
-			"value": 9
-		},
-		{
-			"name": "Minor Healing Potion",
+			"id": 12,
+			"name": "Mana Potion",
 			"type": "potion",
 			"value": 9
 		},
 		{
-			"name": "Energy Tonic",
+			"id": 13,
+			"name": "Stamina Elixir",
 			"type": "potion",
-			"value": 9
+			"value": 5
 		},
 		{
-			"name": "Shield Elixir",
+			"id": 14,
+			"name": "Potion of Invincibility",
+			"type": "potion",
+			"value": 8
+		},
+		{
+			"id": 15,
+			"name": "Elixir of Time",
 			"type": "potion",
 			"value": 7
 		},
 		{
-			"name": "Fire Resistance Brew",
-			"type": "potion",
-			"value": 2
+			"id": 16,
+			"name": "Bronze Spear",
+			"type": "weapon",
+			"value": 7
 		},
 		{
+			"id": 17,
+			"name": "Silver Hammer",
+			"type": "weapon",
+			"value": 10
+		},
+		{
+			"id": 18,
+			"name": "Storm Staff",
+			"type": "weapon",
+			"value": 10
+		},
+		{
+			"id": 19,
+			"name": "Vampire Fang Blade",
+			"type": "weapon",
+			"value": 3
+		},
+		{
+			"id": 20,
+			"name": "Phoenix Claw",
+			"type": "weapon",
+			"value": 7
+		},
+		{
+			"id": 21,
+			"name": "Chainmail Vest",
+			"type": "armor",
+			"value": 10
+		},
+		{
+			"id": 22,
+			"name": "Runed Cloak",
+			"type": "armor",
+			"value": 3
+		},
+		{
+			"id": 23,
+			"name": "Obsidian Shield",
+			"type": "armor",
+			"value": 4
+		},
+		{
+			"id": 24,
+			"name": "Celestial Plate",
+			"type": "armor",
+			"value": 3
+		},
+		{
+			"id": 25,
+			"name": "Astral Shell",
+			"type": "armor",
+			"value": 3
+		},
+		{
+			"id": 26,
+			"name": "Minor Healing Potion",
+			"type": "potion",
+			"value": 4
+		},
+		{
+			"id": 27,
+			"name": "Energy Tonic",
+			"type": "potion",
+			"value": 6
+		},
+		{
+			"id": 28,
+			"name": "Shield Elixir",
+			"type": "potion",
+			"value": 5
+		},
+		{
+			"id": 29,
+			"name": "Fire Resistance Brew",
+			"type": "potion",
+			"value": 6
+		},
+		{
+			"id": 30,
 			"name": "Void Brew",
 			"type": "potion",
 			"value": 4
-		}
-	],
-	"fighter": [
-		{
-			"name": "Dodrio",
-			"hp": 26,
-			"atc": 8,
-			"def": 6,
-			"mana": 4
-		},
-		{
-			"name": "Seel",
-			"hp": 30,
-			"atc": 7,
-			"def": 6,
-			"mana": 5
-		},
-		{
-			"name": "Dewgong",
-			"hp": 29,
-			"atc": 4,
-			"def": 3,
-			"mana": 7
-		},
-		{
-			"name": "Grimer",
-			"hp": 33,
-			"atc": 8,
-			"def": 6,
-			"mana": 7
-		},
-		{
-			"name": "Muk",
-			"hp": 32,
-			"atc": 8,
-			"def": 4,
-			"mana": 5
-		},
-		{
-			"name": "Shellder",
-			"hp": 30,
-			"atc": 4,
-			"def": 6,
-			"mana": 8
-		},
-		{
-			"name": "Cloyster",
-			"hp": 30,
-			"atc": 8,
-			"def": 5,
-			"mana": 3
-		},
-		{
-			"name": "Gastly",
-			"hp": 35,
-			"atc": 5,
-			"def": 3,
-			"mana": 7
-		},
-		{
-			"name": "Haunter",
-			"hp": 34,
-			"atc": 8,
-			"def": 4,
-			"mana": 8
-		},
-		{
-			"name": "Gengar",
-			"hp": 34,
-			"atc": 4,
-			"def": 5,
-			"mana": 8
-		},
-		{
-			"name": "Gigantamax Gengar",
-			"hp": 32,
-			"atc": 6,
-			"def": 5,
-			"mana": 8
-		},
-		{
-			"name": "Mega Gengar",
-			"hp": 35,
-			"atc": 8,
-			"def": 4,
-			"mana": 4
-		},
-		{
-			"name": "Onix",
-			"hp": 26,
-			"atc": 6,
-			"def": 5,
-			"mana": 9
-		},
-		{
-			"name": "Drowzee",
-			"hp": 25,
-			"atc": 4,
-			"def": 5,
-			"mana": 5
-		},
-		{
-			"name": "Hypno",
-			"hp": 28,
-			"atc": 7,
-			"def": 6,
-			"mana": 7
-		},
-		{
-			"name": "Krabby",
-			"hp": 34,
-			"atc": 5,
-			"def": 6,
-			"mana": 5
-		},
-		{
-			"name": "Gigantamax Kingler",
-			"hp": 26,
-			"atc": 7,
-			"def": 6,
-			"mana": 5
-		},
-		{
-			"name": "Kingler",
-			"hp": 30,
-			"atc": 7,
-			"def": 6,
-			"mana": 4
-		},
-		{
-			"name": "Mew",
-			"hp": 30,
-			"atc": 6,
-			"def": 5,
-			"mana": 7
 		}
 	]
 }

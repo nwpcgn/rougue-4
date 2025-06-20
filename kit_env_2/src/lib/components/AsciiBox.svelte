@@ -1,5 +1,12 @@
 <script lang="ts">
-	let { children, icon, title, footer, ...rest } = $props()
+	let {
+		children,
+		icon = 'nwp-arena',
+		title = 'Dungerue Hall',
+		footer,
+		close,
+		onAction
+	} = $props()
 </script>
 
 <section class="wrapper">
@@ -9,20 +16,22 @@
 			<span is-="badge" variant-="background0">{@render iconT(icon)}</span>
 		</div>
 		<div class="box-content">
-			<div>
-				{@render children?.()}
-			</div>
-			<div class="foo-bar">
-				{@render footer?.()}
-			</div>
+			{@render children?.()}
+
+			{#if footer}
+				<div class="foo-bar">
+					{@render footer?.()}
+				</div>
+			{:else if close}
+				{@render fooBar?.()}
+			{/if}
 		</div>
 	</div>
 </section>
 
 {#snippet fooBar()}
 	<div class="foo-bar">
-		<button box-="round">Cancel</button>
-		<button box-="round">Ok</button>
+		<button box-="round" onclick={() => onAction('Cancel')}>Cancel</button>
 	</div>
 {/snippet}
 

@@ -27,6 +27,7 @@ export const load = (async ({ fetch }) => {
 
 	return {
 		name: 'nwp-studio',
+		gameName: game.name,
 		initMap: game.dungeon.map
 	}
 }) satisfies LayoutLoad

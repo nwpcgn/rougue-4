@@ -4,7 +4,7 @@ export const load = (async () => {
 	return {
 		slug: 'lobby',
 		icon: 'nwp-logo-lobby',
-		heading: 'Dungerue - Lobby',
+		heading: 'The Lobby',
 		title: 'Dungerue Manner',
 		component: 'generator',
 		menu: [

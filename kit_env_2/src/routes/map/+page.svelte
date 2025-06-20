@@ -1,28 +1,26 @@
 <script lang="ts">
-	import DomMap from './_domMap.svelte'
-	let fWidth = $state(0)
-	let fHeight = $state(0)
-	let frameWidth = $derived(Math.floor(fWidth * 0.9))
-	let frameHeight = $derived(Math.floor(fHeight * 0.9))
+	// import { game } from '$lib/game.svelte.ts'
+	import AsciiBox from '$lib/components/AsciiBox.svelte'
+	import DomMap from '$lib/game/DomMap.svelte'
+	let frameWidth = $state(0)
+	let frameHeight = $state(0)
+
 	let { data } = $props()
+	// $inspect('opponents', game.dungeon.items.length)
+	// $inspect(game.player.inventory)
 </script>
 
 <svelte:head>
-	<title>Dungerue Hall</title>
+	<title>Dungeon - Map</title>
 </svelte:head>
 
 <section class="page center nwp">
-	<div
-		class="grid aspect-square place-content-center"
-		box-="square"
-		bind:clientHeight={fHeight}
-		bind:clientWidth={fWidth}>
-		<DomMap {frameHeight} {frameWidth}></DomMap>
-	</div>
-</section>
-<section class="page center animated">
-	<header>
-		<h1>{data.title}</h1>
-		<h2>{data.heading}</h2>
-	</header>
+	<AsciiBox {...data}>
+		<div
+			class="grid aspect-square place-content-center"
+			bind:clientHeight={frameHeight}
+			bind:clientWidth={frameWidth}>
+			<DomMap {frameHeight} {frameWidth}></DomMap>
+		</div>
+	</AsciiBox>
 </section>

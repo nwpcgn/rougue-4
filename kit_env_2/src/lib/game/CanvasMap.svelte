@@ -16,19 +16,19 @@
 	width={game.width * tileSize}
 	height={game.height * tileSize}
 	class="border">
-	{#each game.dungeon.map as row, y}
-		{#each row as col, x}
+	{#each game.dungeon.map as row, y (y)}
+		{#each row as col, x (x)}
 			{#if col !== '#'}
 				<Tile color={tileTypes[col].color} {x} {y} {tileSize}></Tile>
 			{/if}
 		{/each}
 	{/each}
-	{#each game.dungeon.items as { x, y, slug }}
+	<!-- 	{#each game.dungeon.items as { x, y, slug }}
 		<Tile color="green" {x} {y} {tileSize}></Tile>
 	{/each}
-	{#each game.dungeon.enemys as { x, y, slug }}
+	{#each game.dungeon.enemys as { x, y }}
 		<Tile color="blue" {x} {y} {tileSize}></Tile>
-	{/each}
+	{/each} -->
 	<Hero
 		col="@"
 		color="red"

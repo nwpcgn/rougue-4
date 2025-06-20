@@ -1,7 +1,10 @@
 import type {
 	Game,
+	Attacks,
+	Note,
+	Lock,
 	Assets,
-	Loot,
+	Grid,
 	Fighter,
 	Player,
 	DungeonMap,
@@ -9,25 +12,23 @@ import type {
 	Position,
 	Corridors
 } from './types/Game'
-
+import getRandomFighter from './game/generateFighter'
 import generateMap from './game/generateMap'
+import { uuid } from '$lib'
 
 class Fighter {
+	id: string = $state('')
 	name: string = $state('')
-	hp: number = $state(0)
-	atc: number = $state(0)
-	def: number = $state(0)
-	mana: number = $state(0)
-	maxHp: number = $state(0)
-	maxMana: number = $state(0)
-	constructor({ name, hp, atc, def, mana }) {
+	info: string = $state()
+	health: number = $state()
+	maxHealth: number = $state()
+	attacks: Attacks[] = $state([])
+	constructor({ name, info, health, maxHealth, attacks }) {
 		this.name = name
-		this.hp = hp
-		this.atc = atc
-		this.def = def
-		this.mana = mana
-		this.maxHp = this.hp
-		this.maxMana = this.mana
+		this.info = info
+		this.health = health
+		this.maxHealth = maxHealth
+		this.attacks = [...attacks]
 	}
 }
 
@@ -35,17 +36,18 @@ class Player {
 	name: string = $state('')
 	level: number = $state(0)
 	hero: Fighter = $state(null)
-	inventory: Loot[] = $state()
+	inventory: Assets[] = $state([])
 	constructor(name: string, hero: Fighter) {
 		this.name = name
 		this.hero = new Fighter(hero)
 		this.level = 1
 		this.inventory = [
-			{
-				name: 'Health Potion',
+			new Item({
+				id: uuid(),
+				name: 'Elixir of Time',
 				type: 'potion',
 				value: 7
-			}
+			})
 		]
 	}
 }
@@ -77,30 +79,107 @@ class Dungeon {
 	updatePosition(obj: Position) {
 		this.position = obj
 	}
-}
 
+	removeItem(x: number, y: number) {
+		const key = `${x},${y}`
+		this.items = this.items.filter((el) => el !== key)
+		return this.items
+	}
+	isItem(x: number, y: number) {
+		const key = `${x},${y}`
+		const res = this.items.find((el) => el === key)
+		return res
+	}
+}
+class Message {
+	title: string = $state('')
+	type: string = $state('info')
+	text: string = $state('')
+	#isOpen: boolean = $state(false)
+	#isReady: boolean = $state(false)
+
+	add(text = '', type = 'info', title = '') {
+		this.text = text
+		this.type = type
+		this.title = title
+		this.show()
+	}
+
+	show() {
+		this.#isReady = false
+		this.#isOpen = true
+	}
+	hide() {
+		this.#isReady = true
+		this.#isOpen = false
+	}
+	get isOpen() {
+		return this.#isOpen
+	}
+
+	set isOpen(value) {
+		this.#isOpen = value
+	}
+
+	get isReady() {
+		return this.#isReady
+	}
+
+	set isReady(value) {
+		this.#isReady = value
+	}
+}
 class Game {
-	#width: number = $state(25)
-	#height: number = $state(25)
-	#size: number = $state(40)
-	#type: string = $state('Uniform')
-	name: string = $state('')
-	#renderLock: boolean = $state(false)
-	#keyLock: boolean = $state(false)
-	gridStyle: string = $derived(
-		`--grid-cols: ${this.#width};--grid-rows: ${this.#height};--grid-size: ${this.#size}px;`
-	)
-	assets: Assets = $state({
-		loot: [],
-		fighter: []
-	})
+	name: string = $state('Dungerue Manner')
+	grid: Grid = $state({ width: 30, height: 30, size: 30, type: 'Uniform' })
+	lock: Lock = $state({ render: false, keys: false })
+	assets: Assets[] = $state([])
 	dungeon: DungeonMap = new Dungeon()
 	player: Player = $state(null)
-	enemy: Fighter = $state(null)
+	opponents: Fighter[] = $state([])
+	msg: Note = new Message()
+	gridStyle: string = $derived(
+		`--grid-cols: ${this.grid.width};--grid-rows: ${this.grid.height};--grid-size: ${this.grid.size}px;`
+	)
 	constructor(name = '') {
 		this.name = name
 	}
 
+	init(daten, config = {}) {
+		this.assets = this.shuffle(daten?.loot)
+		if (Object.keys(config).length) this.updateGrid(config)
+
+		this.createMap()
+		this.createChars()
+	}
+	createMap() {
+		this.dungeon.generate(this.grid.width, this.grid.height, this.grid.type)
+	}
+	updateGrid(config = {}) {
+		this.grid = { ...this.grid, ...config }
+	}
+
+	createChars() {
+		const p = getRandomFighter(3)
+		this.player = new Player('Caryn Dynasty', p)
+
+		for (let index = 0; index < 10; index++) {
+			// const element = array[index];
+			const e = getRandomFighter(2)
+			this.opponents.push(new Fighter(e))
+		}
+	}
+
+	updateHero(obj = { x: 0, y: 0 }) {
+		this.dungeon.updatePosition(obj)
+	}
+	isPlayer(x: number, y: number) {
+		return this.dungeon.position.x == x && this.dungeon.position.y == y
+	}
+	addInventar() {
+		const newInv = { ...this.assets.shift(), id: uuid() }
+		this.player.inventory.push(new Item(newInv))
+	}
 	shuffle(array) {
 		const copy = [...array]
 		for (let i = copy.length - 1; i > 0; i--) {
@@ -109,106 +188,14 @@ class Game {
 		}
 		return copy
 	}
-
-	init(daten) {
-		this.assets.loot = this.shuffle(daten.loot)
-		this.assets.fighter = this.shuffle(daten.fighter)
-		this.createMap()
-		this.createChars()
-	}
-	createMap() {
-		this.dungeon.generate(this.width, this.height, this.type)
-	}
-	createChars() {
-		const p = this.assets.fighter?.shift()
-		const e = this.assets.fighter?.shift()
-		this.player = new Player('Caryn Dynasty', p)
-		this.enemy = new Fighter(e)
-	}
-
-	updateHero(obj = { x: 0, y: 0 }) {
-		this.dungeon.updatePosition(obj)
-	}
-
-	get width() {
-		return this.#width
-	}
-
-	set width(value = 10) {
-		this.#width = value
-	}
-
-	get height() {
-		return this.#height
-	}
-
-	set height(value = 10) {
-		this.#height = value
-	}
-
-	get size() {
-		return this.#size
-	}
-
-	set size(value = 10) {
-		this.#size = value
-	}
-
-	get type() {
-		return this.#type
-	}
-
-	set type(value = 'Uniform') {
-		this.#type = value
-	}
-
-	set keyLock(value = false) {
-		this.#keyLock = value
-	}
-	get keyLock() {
-		return this.#keyLock
-	}
-	
-	set renderLock(value = false) {
-		this.#renderLock = value
-	}
-	get renderLock() {
-		return this.#renderLock
-	}
 }
 
 class Item {
-	constructor(name, type, value) {
+	constructor({ id, name, type, value }) {
+		this.id = id
 		this.name = name
 		this.type = type
 		this.value = value
-	}
-
-	use(player) {
-		switch (this.type) {
-			case 'medkit':
-				const healAmount = Math.min(
-					this.value,
-					player.maxHealth - player.health
-				)
-				player.health += healAmount
-				console.log(
-					`${player.name} heilt um ${healAmount} Punkte. Neue Gesundheit: ${player.health}`
-				)
-				break
-			case 'energiezelle':
-				player.attackPower += this.value
-				console.log(
-					`${player.name}'s Angriffskraft erhöht sich um ${this.value}. Neue Angriffskraft: ${player.attackPower}`
-				)
-				break
-			case 'munition':
-				console.log(
-					`${player.name} füllt Munition auf. Nächster Angriff verursacht zusätzlichen Schaden.`
-				)
-				// Implement logic for extra damage in the next attack
-				break
-		}
 	}
 }
 
