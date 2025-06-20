@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Details from './Details.svelte'
-	import { mainMenu } from '$lib'
+	import { mainMenu, sleep } from '$lib'
+	import { game } from '$lib/game.svelte'
 	let { children, currentPath, isClose = $bindable(false) } = $props()
 </script>
 
@@ -20,6 +21,37 @@
 						{/each}
 					</ul>
 				</Details>
+				{#if currentPath === '/map'}
+					<Details label="Player" isOpen>
+						<ul marker-="tree">
+							<li><code>Hero</code> {game.player.name}</li>
+							<li>Level: {game?.player.level}</li>
+							<li>Inventory: {game.player?.inventory.length}</li>
+						</ul>
+					</Details>
+					<Details label="Dungeon" isOpen>
+						<ul marker-="tree">
+							<li>Map: {game.grid.width} x {game.grid.height}</li>
+							<li>
+								Hero: <strong
+									>{game.dungeon.position.x} x {game.dungeon.position
+										.y}</strong>
+							</li>
+							<li>Items: {game.dungeon.items.length}</li>
+							<li>Enemies: {game.dungeon.enemys.length}</li>
+						</ul>
+						<div>
+							<button
+								onclick={async () => {
+									game.lock.render = true
+									await sleep(100)
+									game.createMap()
+									await sleep(100)
+									game.lock.render = false
+								}}>New Map</button>
+						</div>
+					</Details>
+				{/if}
 			</div>
 		</div>
 		<div id="sidebar-nav-container">

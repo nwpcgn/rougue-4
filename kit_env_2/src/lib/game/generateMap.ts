@@ -109,8 +109,10 @@ export function generateMap(
 		}
 	}
 	const generateBoxes = (freeCells) => {
-		const length1 = randNum(2, Math.floor(width * height * 0.01))
-		// console.log(width * height, Math.floor((width * height) * 0.01))
+		const length7 = Math.round(freeCells.length * 0.04)
+		const length1 = randNum(1, Math.max(2, length7))
+		
+		console.log({length7, length1});
 		for (let i = 0; i < length1; i++) {
 			const index = Math.floor(ROT.RNG.getUniform() * freeCells.length)
 			const key = freeCells.splice(index, 1)[0]

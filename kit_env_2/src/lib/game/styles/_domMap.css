@@ -47,6 +47,8 @@
 	grid-template-areas: 'tile-sub';
 }
 
+
+
 .tile-el.left {
 	grid-area: 1 / 1 / 4 / 2;
 }

@@ -36,7 +36,7 @@
 		if (moveCooldown > Date.now()) return
 		const targetX = game.dungeon.position.x + dx
 		const targetY = game.dungeon.position.y + dy
-		const item = isItem(targetX, targetY)
+		const item = game.dungeon.isItem(targetX, targetY)
 		if (item) {
 			game.dungeon.removeItem(targetX, targetY)
 
@@ -45,7 +45,7 @@
 
 		const cell = game.dungeon.map[targetY][targetX]
 
-		if (className[cell].walkable) {
+		if (className[game.dungeon.map[targetY][targetX]].walkable) {
 			game.updateHero({ x: targetX, y: targetY })
 			moveCooldown = Date.now() + moveDelay
 		}
