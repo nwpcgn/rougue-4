@@ -136,7 +136,7 @@ class Game {
 	dungeon: DungeonMap = new Dungeon()
 	player: PlayerT = $state(null)
 	opponents: FighterT[] = $state([])
-	msg: NoteT = new Message()
+	msg: Note = new Message()
 	gridStyle: string = $derived(
 		`--grid-cols: ${this.grid.width};--grid-rows: ${this.grid.height};--grid-size: ${this.grid.size}px;`
 	)

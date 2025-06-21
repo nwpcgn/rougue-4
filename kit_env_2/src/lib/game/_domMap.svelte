@@ -1,8 +1,8 @@
 <script lang="ts">
 	import './styles/_domMap.css'
 	import { game } from '../game.svelte.ts'
-	const className = {
-		'#': { color: '#f8f9fa', name: 'opacity-5', walkable: false },
+	const tileAtlas = {
+		'#': { color: '#f8f9fa', name: 'wall', walkable: false },
 		_: { color: '#1abc9c', name: 'room', walkable: true },
 		D: { color: '#f39c12', name: 'door', walkable: true },
 		'.': { color: '#3498db', name: 'floor', walkable: true }
@@ -14,21 +14,20 @@
 	{#if !game.lock.render}
 		{#each game.dungeon.map as row, y (y)}
 			{#each row as col, x (x)}
-				<div class="tile" class:opacity-5={!game.inDistance(x, y)}>
-					{#if col !== '#'}
+				{#if game.inDistance(x, y, 4.8)}
+					<div class="tile" class:opacity-5={!game.inDistance(x, y, 2.7)}>
 						{@render tileEl(x, y, col)}
-					{:else}
-						<span class="tile-el wall"
-							><span class="tile-sub center">{col}</span></span>
-					{/if}
-				</div>
+					</div>
+				{:else}
+					<span class="tile"></span>
+				{/if}
 			{/each}
 		{/each}
 	{/if}
 </div>
 
 {#snippet tileEl(x = 0, y = 0, col = '#')}
-	<span class="tile-el {className[col].name}">
+	<span class="tile-el {tileAtlas[col].name}">
 		{#if col === '.'}
 			{@render iconT('floor1')}
 		{:else if col === '_'}
@@ -36,7 +35,7 @@
 		{:else if col === 'D'}
 			{@render iconT('doorEl')}
 		{:else}
-			<span class="tile-sub">{col}</span>
+			<span class="tile-sub center">{col}</span>
 		{/if}
 		{#if game.isPlayer(x, y)}
 			<span class="tile-sub center player" style="--fs: {tileSize * 0.8}px; "

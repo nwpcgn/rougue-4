@@ -12,21 +12,23 @@
 	let { tileSize = 16 } = $props()
 </script>
 
-<Canvas
-	width={game.grid.width * tileSize}
-	height={game.grid.height * tileSize}
-	class="bg-[#292524]">
-	{#each game.dungeon.map as row, y (y)}
-		{#each row as col, x (x)}
-			{#if col !== '#'}
-				<Tile color="#d6d3d1" {x} {y} {tileSize}></Tile>
-			{/if}
+{#if !game.lock.render}
+	<Canvas
+		width={game.grid.width * tileSize}
+		height={game.grid.height * tileSize}
+		class="bg-[#292524]">
+		{#each game.dungeon.map as row, y (y)}
+			{#each row as col, x (x)}
+				{#if col !== '#'}
+					<Tile color="#d6d3d1" {x} {y} {tileSize}></Tile>
+				{/if}
+			{/each}
 		{/each}
-	{/each}
-	<Hero
-		col="@"
-		color="red"
-		x={game.dungeon.position.x}
-		y={game.dungeon.position.y}
-		{tileSize}></Hero>
-</Canvas>
+		<Hero
+			col="@"
+			color="red"
+			x={game.dungeon.position.x}
+			y={game.dungeon.position.y}
+			{tileSize}></Hero>
+	</Canvas>
+{/if}

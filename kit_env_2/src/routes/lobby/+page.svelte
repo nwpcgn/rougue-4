@@ -15,6 +15,7 @@
 			)
 		)
 	)
+	$inspect('preview Size:', preTileSize)
 </script>
 
 <svelte:head>

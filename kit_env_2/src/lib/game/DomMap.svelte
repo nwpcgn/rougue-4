@@ -2,9 +2,9 @@
 	import './styles/_domMap.css'
 	import HtmlMap from './_domMap.svelte'
 	import { game } from '../game.svelte.ts'
-	const moveDelay = 150
-	const className = {
-		'#': { color: '#f8f9fa', name: 'opacity-5', walkable: false },
+	const moveDelay = 180
+	const tileAtlas = {
+		'#': { color: '#f8f9fa', name: 'wall', walkable: false },
 		_: { color: '#1abc9c', name: 'room', walkable: true },
 		D: { color: '#f39c12', name: 'door', walkable: true },
 		'.': { color: '#3498db', name: 'floor', walkable: true }
@@ -36,18 +36,19 @@
 		if (moveCooldown > Date.now()) return
 		const targetX = game.dungeon.position.x + dx
 		const targetY = game.dungeon.position.y + dy
-		const item = game.dungeon.isItem(targetX, targetY)
-		if (item) {
-			game.dungeon.removeItem(targetX, targetY)
-
-			game.addInventar()
-		}
 
 		const cell = game.dungeon.map[targetY][targetX]
 
-		if (className[cell].walkable) {
+		if (tileAtlas[cell].walkable) {
+			const item = game.dungeon.isItem(targetX, targetY)
 			game.updateHero({ x: targetX, y: targetY })
 			moveCooldown = Date.now() + moveDelay
+			if (item) {
+				game.dungeon.removeItem(targetX, targetY)
+
+				const newItem = game.addInventar()
+				console.log('add Item', newItem)
+			}
 		}
 	}
 
