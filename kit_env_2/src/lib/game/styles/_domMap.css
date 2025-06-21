@@ -22,7 +22,7 @@
 	--gg-tile-full: 2 / 2 / 3 / 3;
 	--gg-tile-bg-room: var(--background2);
 	--gg-tile-bg-door: var(--background3);
-	--gg-tile-bg-floor: var(--background1);
+	--gg-tile-color-floor: var(--background2);
 	--gg-tile-color-wall: var(--foreground3);
 }
 
@@ -46,8 +46,6 @@
 	grid-template-rows: 1fr;
 	grid-template-areas: 'tile-sub';
 }
-
-
 
 .tile-el.left {
 	grid-area: 1 / 1 / 4 / 2;
@@ -103,7 +101,7 @@
 }
 
 .tile-el.floor {
-	background-color: var(--gg-tile-bg-floor);
+	color: var(--gg-tile-color-floor);
 	grid-area: var(--gg-tile-full);
 
 	&.poly {

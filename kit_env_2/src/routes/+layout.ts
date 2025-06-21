@@ -23,7 +23,7 @@ export const load = (async ({ fetch }) => {
 		)
 	)
 
-	game.init(res[0], { width: 50, height: 40, size: 30 })
+	game.init(res[0], { width: 40, height: 40, size: 40 })
 
 	return {
 		name: 'nwp-studio',

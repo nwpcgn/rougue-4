@@ -45,7 +45,7 @@
 
 		const cell = game.dungeon.map[targetY][targetX]
 
-		if (className[game.dungeon.map[targetY][targetX]].walkable) {
+		if (className[cell].walkable) {
 			game.updateHero({ x: targetX, y: targetY })
 			moveCooldown = Date.now() + moveDelay
 		}
