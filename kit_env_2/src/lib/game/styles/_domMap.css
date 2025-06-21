@@ -37,6 +37,7 @@
 	position: relative;
 	overflow: hidden;
 	padding: 0;
+	transition: opacity 0.4s ease-in-out;
 }
 
 .tile-el {

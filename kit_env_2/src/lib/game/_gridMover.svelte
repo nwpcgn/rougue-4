@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Layer } from 'svelte-canvas'
 	let { x, y, color, tileSize } = $props()
-	// import { Tween, Spring } from 'svelte/motion'
+	import { Spring } from 'svelte/motion'
 	// import { cubicOut } from 'svelte/easing'
 
 	// let _x = new Tween(x * tileSize, {

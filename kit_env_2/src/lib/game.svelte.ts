@@ -176,6 +176,13 @@ class Game {
 	isPlayer(x: number, y: number) {
 		return this.dungeon.position.x == x && this.dungeon.position.y == y
 	}
+	inDistance(x1: number, y1: number) {
+		const rad = Math.hypot(
+			this.dungeon.position.x - x1,
+			this.dungeon.position.y - y1
+		)
+		return rad < 2.8
+	}
 	addInventar() {
 		const newInv = { ...this.assets.shift(), id: uuid() }
 		this.player.inventory.push(new Item(newInv))

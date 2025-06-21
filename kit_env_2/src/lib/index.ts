@@ -6,7 +6,7 @@ export { default as Hero } from './components/Hero.svelte'
 export { default as InfoBar } from './components/InfoBar.svelte'
 export { default as Loader } from './components/Loader.svelte'
 export { default as Modal } from './components/Modal.svelte'
-export { default as Preview } from './components/Preview.svelte'
+export { default as PreviewMap } from './components/PreviewMap.svelte'
 export { default as SideBar } from './components/SideBar.svelte'
 export { default as Switch } from './components/Switch.svelte'
 //@endindex

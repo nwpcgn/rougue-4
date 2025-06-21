@@ -14,7 +14,7 @@
 	{#if !game.lock.render}
 		{#each game.dungeon.map as row, y (y)}
 			{#each row as col, x (x)}
-				<div class="tile">
+				<div class="tile" class:opacity-5={!game.inDistance(x, y)}>
 					{#if col !== '#'}
 						{@render tileEl(x, y, col)}
 					{:else}

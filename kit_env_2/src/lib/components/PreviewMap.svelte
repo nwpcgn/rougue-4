@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { game } from '../game.svelte.ts'
+	import { game } from '../game.svelte.js'
 	import CanvasMap from '../game/CanvasMap.svelte'
 	let tileSize = $state(12)
 	let fW = $state(0)
