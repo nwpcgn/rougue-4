@@ -1,45 +1,45 @@
-﻿export interface Game {
+﻿export interface GameT {
 	name: string
 	gridStyle: string
-	lock: Lock
-	assets?: Assets[] | null
-	opponents?: Fighter[] | null
-	player: Player
-	grid: Grid
-	dungeon: Dungeon
+	lock: LockT
+	assets?: AssetsT[] | null
+	opponents?: FighterT[] | null
+	player: PlayerT
+	grid: GridT
+	dungeon: DungeonMap
 	msg: Note
 }
-export interface Lock {
+export interface LockT {
 	render: boolean
 	keys: boolean
 }
-export interface Assets {
+export interface AssetsT {
 	id: string
 	name: string
 	type: string
 	value: number
 }
-export interface Fighter {
+export interface FighterT {
 	id: string
 	name: string
 	info: string
 	health: number
 	maxHealth: number
-	attacks?: Attacks[] | null
+	attacks?: AttacksT[] | null
 }
-export interface Attacks {
+export interface AttacksT {
 	name: string
 	dice: string
 	damage: number
 	description: string
 }
-export interface Player {
+export interface PlayerT {
 	level: number
 	name: string
-	fighter?: Fighter[] | null
-	inventory?: Assets[] | null
+	fighter?: FighterT[] | null
+	inventory?: AssetsT[] | null
 }
-export interface Grid {
+export interface GridT {
 	width: number
 	height: number
 	size: number
@@ -47,29 +47,29 @@ export interface Grid {
 }
 export interface DungeonMap {
 	map?: (string[] | null)[] | null
-	rooms?: Rooms[] | null
+	rooms?: RoomsT[] | null
 	items?: string[] | null
 	freeCells?: string[] | null
 	enemys?: string[] | null
-	position: Position
-	corridors?: Corridors[] | null
+	position: PositionT
+	corridors?: CorridorsT[] | null
 	outside?: string[] | null
 }
-export interface Rooms {
+export interface RoomsT {
 	x1: number
 	y1: number
 	x2: number
 	y2: number
-	doors?: Position[] | null
+	doors?: PositionT[] | null
 	centerX: number
 	centerY: number
 	roomId: number
 }
-export interface Position {
+export interface PositionT {
 	x: number
 	y: number
 }
-export interface Corridors {
+export interface CorridorsT {
 	_startX: number
 	_startY: number
 	_endX: number
@@ -84,16 +84,8 @@ export interface Note {
 	isOpen: boolean
 	isReady: boolean
 }
-
-/* export {
-	Game,
-	Assets,
-	Grid,
-	Fighter,
-	Player,
-	DungeonMap,
-	Rooms,
-	Position,
-	Corridors
+/*
+export {
+	GameT,LockT,AssetsT,FighterT,AttacksT,PlayerT,DungeonMap,RoomsT,PositionT,CorridorsT,Note
 }
  */

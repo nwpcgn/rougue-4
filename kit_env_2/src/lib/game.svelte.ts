@@ -1,16 +1,15 @@
 import type {
-	Game,
-	Attacks,
-	Note,
-	Lock,
-	Assets,
-	Grid,
-	Fighter,
-	Player,
+	GameT,
+	LockT,
+	AssetsT,
+	FighterT,
+	AttacksT,
+	PlayerT,
 	DungeonMap,
-	Rooms,
-	Position,
-	Corridors
+	RoomsT,
+	PositionT,
+	CorridorsT,
+	Note
 } from './types/Game'
 import getRandomFighter from './game/generateFighter'
 import generateMap from './game/generateMap'
@@ -22,7 +21,7 @@ class Fighter {
 	info: string = $state()
 	health: number = $state()
 	maxHealth: number = $state()
-	attacks: Attacks[] = $state([])
+	attacks: AttacksT[] = $state([])
 	constructor({ name, info, health, maxHealth, attacks }) {
 		this.name = name
 		this.info = info
@@ -35,9 +34,9 @@ class Fighter {
 class Player {
 	name: string = $state('')
 	level: number = $state(0)
-	hero: Fighter = $state(null)
-	inventory: Assets[] = $state([])
-	constructor(name: string, hero: Fighter) {
+	hero: FighterT = $state(null)
+	inventory: AssetsT[] = $state([])
+	constructor(name: string, hero: FighterT) {
 		this.name = name
 		this.hero = new Fighter(hero)
 		this.level = 1
@@ -58,9 +57,9 @@ class Dungeon {
 	enemys: string[] = $state([])
 	outside: string[] = $state([])
 	freeCells: string[] = $state([])
-	corridors: Corridors[] = $state([])
-	rooms: Rooms[] = $state([])
-	position: Position = $state({
+	corridors: CorridorsT[] = $state([])
+	rooms: RoomsT[] = $state([])
+	position: PositionT = $state({
 		x: 0,
 		y: 0
 	})
@@ -131,13 +130,13 @@ class Message {
 }
 class Game {
 	name: string = $state('Dungerue Manner')
-	grid: Grid = $state({ width: 30, height: 30, size: 30, type: 'Uniform' })
-	lock: Lock = $state({ render: false, keys: false })
-	assets: Assets[] = $state([])
+	grid: GridT = $state({ width: 30, height: 30, size: 30, type: 'Uniform' })
+	lock: LockT = $state({ render: false, keys: false })
+	assets: AssetsT[] = $state([])
 	dungeon: DungeonMap = new Dungeon()
-	player: Player = $state(null)
-	opponents: Fighter[] = $state([])
-	msg: Note = new Message()
+	player: PlayerT = $state(null)
+	opponents: FighterT[] = $state([])
+	msg: NoteT = new Message()
 	gridStyle: string = $derived(
 		`--grid-cols: ${this.grid.width};--grid-rows: ${this.grid.height};--grid-size: ${this.grid.size}px;`
 	)
@@ -176,16 +175,17 @@ class Game {
 	isPlayer(x: number, y: number) {
 		return this.dungeon.position.x == x && this.dungeon.position.y == y
 	}
-	inDistance(x1: number, y1: number) {
+	inDistance(x1: number, y1: number, dist = 2.8) {
 		const rad = Math.hypot(
 			this.dungeon.position.x - x1,
 			this.dungeon.position.y - y1
 		)
-		return rad < 2.8
+		return rad < dist
 	}
 	addInventar() {
 		const newInv = { ...this.assets.shift(), id: uuid() }
 		this.player.inventory.push(new Item(newInv))
+		return newInv
 	}
 	shuffle(array) {
 		const copy = [...array]
@@ -206,4 +206,4 @@ class Item {
 	}
 }
 
-export const game: Game = new Game('Dungerue Manner')
+export const game: GameT = new Game('Dungerue Manner')
