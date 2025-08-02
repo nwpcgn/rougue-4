@@ -1,6 +1,7 @@
 <script lang="ts">
 	import './styles/_domMap.css'
 	import HtmlMap from './_domMap.svelte'
+	import Modal from '../components/Modal.svelte'
 	import { game } from '../game.svelte.ts'
 	const moveDelay = 180
 	const tileAtlas = {
@@ -11,9 +12,11 @@
 	}
 	let { frameWidth = 512, frameHeight = 512 } = $props()
 	let moveCooldown = $state(0)
+	let showModal = $state(false)
 	let tileSize = $derived(game.grid.size)
 	let cameraX = $state(0)
 	let cameraY = $state(0)
+	let itemObj = $state({})
 
 	function updateCamera() {
 		const worldWidth = game.grid.width * tileSize
@@ -46,8 +49,8 @@
 			if (item) {
 				game.dungeon.removeItem(targetX, targetY)
 
-				const newItem = game.addInventar()
-				console.log('add Item', newItem)
+				itemObj = game.addInventar()
+				showModal = true
 			}
 		}
 	}
@@ -72,3 +75,11 @@
 	style="--fw: {frameWidth}px; --fh: {frameHeight}px; {game.gridStyle}">
 	<HtmlMap {cameraX} {cameraY} {tileSize}></HtmlMap>
 </div>
+
+<Modal
+	bind:showModal
+	onClose={() => {
+		console.log('Modal Close')
+	}}>
+	<div>Modal</div>
+</Modal>

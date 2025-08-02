@@ -5,6 +5,7 @@
 	import Sprites from '$lib/asset/sprites.svelte'
 	import { SideBar, sleep } from '$lib'
 	import { onMount } from 'svelte'
+	import { game } from '$lib/game.svelte'
 	let { children } = $props()
 	let currentPath = $derived(page.url.hash.replace('#', ''))
 	onMount(async () => {})
@@ -17,7 +18,26 @@
 </script>
 
 <div class="sidebar-light" data-layout="app">
-	<SideBar {currentPath}></SideBar>
+	<SideBar {currentPath}>
+		<table class="w-full">
+			<thead>
+				<tr>
+					<th>Locked</th>
+					<th>#</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Render</td>
+					<td>{game.lock.render}</td>
+				</tr>
+				<tr>
+					<td>Keys</td>
+					<td>{game.lock.keys}</td>
+				</tr>
+			</tbody>
+		</table>
+	</SideBar>
 
 	<main class="main">
 		{#await promise then value}

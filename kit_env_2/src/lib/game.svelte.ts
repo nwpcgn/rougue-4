@@ -13,7 +13,7 @@ import type {
 } from './types/Game'
 import getRandomFighter from './game/generateFighter'
 import generateMap from './game/generateMap'
-import { uuid } from '$lib'
+import { sleep, uuid } from '$lib'
 
 class Fighter {
 	id: string = $state('')
@@ -151,8 +151,12 @@ class Game {
 		this.createMap()
 		this.createChars()
 	}
-	createMap() {
+	async createMap() {
+		this.lock.render = true
+		await sleep(100)
 		this.dungeon.generate(this.grid.width, this.grid.height, this.grid.type)
+		await sleep(100)
+		this.lock.render = false
 	}
 	updateGrid(config = {}) {
 		this.grid = { ...this.grid, ...config }

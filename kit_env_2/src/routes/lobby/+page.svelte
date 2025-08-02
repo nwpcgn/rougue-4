@@ -43,6 +43,12 @@
 							<th>Tilesize</th>
 							<td>{game.grid.size}px</td>
 						</tr>
+
+						<tr>
+							<th>Inv/Mon</th>
+							<td
+								>{game.dungeon.items?.length}/{game.dungeon.enemys?.length}</td>
+						</tr>
 					</tbody>
 				</table>
 				<nav class="mt-auto">

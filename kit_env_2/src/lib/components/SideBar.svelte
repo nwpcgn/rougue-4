@@ -23,11 +23,13 @@
 				</Details>
 				{#if currentPath === '/map'}
 					<Details label="Player" isOpen>
-						<ul marker-="tree">
-							<li><code>Hero</code> {game.player.name}</li>
-							<li>Level: {game?.player.level}</li>
-							<li>Inventory: {game.player?.inventory.length}</li>
-						</ul>
+						{#if game.player}
+							<ul marker-="tree">
+								<li><code>Hero</code> {game.player.name}</li>
+								<li>Level: {game.player.level}</li>
+								<li>Inventory: {game.player.inventory.length}</li>
+							</ul>
+						{/if}
 					</Details>
 					<Details label="Dungeon" isOpen>
 						<ul marker-="tree">
@@ -37,18 +39,11 @@
 									>{game.dungeon.position.x} x {game.dungeon.position
 										.y}</strong>
 							</li>
-							<li>Items: {game.dungeon.items.length}</li>
-							<li>Enemies: {game.dungeon.enemys.length}</li>
+							<li>Items: {game.dungeon?.items.length}</li>
+							<li>Enemies: {game.dungeon?.enemys.length}</li>
 						</ul>
 						<div>
-							<button
-								onclick={async () => {
-									game.lock.render = true
-									await sleep(100)
-									game.createMap()
-									await sleep(100)
-									game.lock.render = false
-								}}>New Map</button>
+							<a href="#/lobby" is-="button">New Map</a>
 						</div>
 					</Details>
 				{/if}

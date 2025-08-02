@@ -1,9 +1,10 @@
 <script lang="ts">
-	let { showModal = $bindable(), children, footer } = $props()
+	let { showModal = $bindable(), children, footer, onClose } = $props()
 	let dialog = $state() // HTMLDialogElement
 
 	const handleCloseAction = () => {
 		showModal = false
+		onClose()
 	}
 
 	$effect(() => {
@@ -29,11 +30,6 @@
 </dialog>
 
 <style>
-	@layer base, utils, components;
-
-	@import '@webtui/css/components/button.css';
-	@import '@webtui/css/components/dialog.css';
-	@import '@webtui/css/utils/box.css';
 	#dialog {
 		--max-width: 50ch;
 		width: min(100%, var(--max-width));
